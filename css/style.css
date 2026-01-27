@@ -317,3 +317,112 @@ button:focus {
     visibility: visible;
     opacity: 1;
 }
+
+/* Smooth transition untuk semua elemen */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode untuk body */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark body {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+/* Dark mode untuk navbar */
+nav {
+    background-color: #ffffff;
+}
+
+.dark nav {
+    background-color: #2d3748;
+}
+
+/* Dark mode untuk sections */
+section {
+    background-color: #ffffff;
+}
+
+.dark section {
+    background-color: #1a202c;
+}
+
+/* Dark mode untuk section dengan background gray */
+.bg-gray-50 {
+    background-color: #f9fafb;
+}
+
+.dark .bg-gray-50 {
+    background-color: #2d3748;
+}
+
+/* Dark mode untuk headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #1a202c;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color: #f7fafc;
+}
+
+/* Dark mode untuk paragraf */
+p {
+    color: #4a5568;
+}
+
+.dark p {
+    color: #cbd5e0;
+}
+
+/* Dark mode untuk text-gray-600 */
+.text-gray-600 {
+    color: #718096;
+}
+
+.dark .text-gray-600 {
+    color: #a0aec0;
+}
+
+/* Dark mode untuk cards */
+.card,
+.bg-white {
+    background-color: #ffffff;
+}
+
+.dark .card,
+.dark .bg-white {
+    background-color: #2d3748;
+}
+
+/* Dark mode untuk borders */
+.border {
+    border-color: #e2e8f0;
+}
+
+.dark .border {
+    border-color: #4a5568;
+}
+
+/* Dark mode untuk links */
+a {
+    color: #3182ce;
+}
+
+.dark a {
+    color: #63b3ed;
+}
+
+/* Hover effect untuk toggle button */
+#dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
