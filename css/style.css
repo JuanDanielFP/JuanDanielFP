@@ -426,3 +426,245 @@ a {
 #dark-mode-toggle:hover {
     transform: scale(1.1);
 }
+
+/* Modal Animation */
+#projectModal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#projectModal.closing {
+    animation: fadeOut 0.3s ease-out;
+}
+
+#projectModal > div {
+    animation: slideUp 0.4s ease-out;
+    transform-origin: center;
+}
+
+#projectModal.closing > div {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(4px);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        backdrop-filter: blur(4px);
+    }
+    to {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+}
+
+/* Image hover effect */
+#modalContent img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#modalContent img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Smooth scrollbar */
+#projectModal > div {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+#projectModal > div::-webkit-scrollbar {
+    width: 8px;
+}
+
+#projectModal > div::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 10px;
+}
+
+#projectModal > div::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+#projectModal > div::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Dark mode scrollbar */
+.dark #projectModal > div::-webkit-scrollbar-track {
+    background: #2d3748;
+}
+
+.dark #projectModal > div::-webkit-scrollbar-thumb {
+    background: #4a5568;
+}
+
+.dark #projectModal > div::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+/* Fullscreen image animation */
+.fullscreen-overlay {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.fullscreen-overlay img {
+    animation: zoomIn 0.4s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Button hover effects */
+button {
+    transition: all 0.3s ease;
+}
+
+/* Close button pulse effect */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+#projectModal .close-btn:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* Modal Animation - Improved */
+#projectModal {
+    transition: opacity 0.3s ease-out, backdrop-filter 0.3s ease-out;
+}
+
+#projectModal.show {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+#projectModal.closing {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+#projectModal > div {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease-out;
+}
+
+#projectModal.show > div {
+    animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+#projectModal.closing > div {
+    animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Keyframe Animations - Enhanced */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(4px);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        backdrop-filter: blur(4px);
+    }
+    to {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+}
+
+/* Close Button - Enhanced Hover Effect */
+.close-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg) scale(1.1);
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.close-btn:active {
+    transform: rotate(90deg) scale(0.95);
+}
+
+/* Dark mode close button */
+.dark .close-btn:hover {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}

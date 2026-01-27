@@ -352,3 +352,134 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Fungsi untuk membuka modal dengan animasi smooth
+function openProjectModal(projectId) {
+    const modal = document.getElementById('projectModal');
+    const modalContent = document.getElementById('modalContent');
+    const project = projectData[projectId];
+
+    if (!project) return;
+
+    // Generate HTML content dengan stagger animation
+    let imagesHTML = '';
+    project.images.forEach((image, index) => {
+        imagesHTML += `
+            <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out ${index * 0.1 + 0.3}s forwards;">
+                <img src="${image.src}" 
+                     alt="${image.caption}" 
+                     class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300"
+                     onclick="openImageFullscreen('${image.src}')"
+                     onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
+                <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
+            </div>
+        `;
+    });
+
+    let technologiesHTML = '';
+    project.technologies.forEach((tech, index) => {
+        technologiesHTML += `
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block opacity-0" style="animation: fadeInUp 0.4s ease-out ${index * 0.05 + 0.2}s forwards;">${tech}</span>
+        `;
+    });
+
+    modalContent.innerHTML = `
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out forwards;">
+            ${project.title}
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify opacity-0" style="animation: fadeInUp 0.5s ease-out 0.1s forwards;">
+            ${project.details}
+        </p>
+        
+        <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.15s forwards;">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
+            <div class="flex flex-wrap">
+                ${technologiesHTML}
+            </div>
+        </div>
+
+        <div class="mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.2s forwards;">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
+            <div class="space-y-6">
+                ${imagesHTML}
+            </div>
+        </div>
+    `;
+
+    // Show modal with smooth animation
+    modal.classList.remove('hidden', 'closing');
+    modal.classList.add('flex');
+    
+    // Trigger animation after a small delay to ensure proper rendering
+    requestAnimationFrame(() => {
+        modal.classList.add('show');
+    });
+    
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Fungsi untuk menutup modal dengan animasi smooth
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    
+    // Remove show class and add closing animation
+    modal.classList.remove('show');
+    modal.classList.add('closing');
+    
+    // Wait for animation to complete before hiding
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex', 'closing');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }, 300); // Match with animation duration
+}
+
+// Variable to prevent multiple close calls
+let isClosing = false;
+
+// Enhanced close function with debounce
+function closeProjectModalSmooth() {
+    if (isClosing) return; // Prevent multiple calls
+    
+    isClosing = true;
+    const modal = document.getElementById('projectModal');
+    
+    // Add closing animation
+    modal.classList.remove('show');
+    modal.classList.add('closing');
+    
+    // Wait for animation to complete
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex', 'closing');
+        document.body.style.overflow = 'auto';
+        isClosing = false; // Reset flag
+    }, 350); // Slightly longer for smoother effect
+}
+
+// Close modal when clicking outside - IMPROVED
+document.getElementById('projectModal').addEventListener('click', function(e) {
+    // Only close if clicking the backdrop (not the modal content)
+    if (e.target === this && !isClosing) {
+        closeProjectModalSmooth();
+    }
+});
+
+// Close modal with ESC key - IMPROVED
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+        const modal = document.getElementById('projectModal');
+        if (!modal.classList.contains('hidden') && !isClosing) {
+            closeProjectModalSmooth();
+        }
+    }
+});
+
+// Prevent closing when clicking inside modal content
+document.addEventListener('DOMContentLoaded', function() {
+    const modalContent = document.querySelector('#projectModal > div');
+    if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling to modal backdrop
+        });
+    }
+});
