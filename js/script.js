@@ -483,3 +483,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// const container = document.getElementById('gallery');
+// projectData.project1.images.forEach(item => {
+//   const div = document.createElement('div');
+//   div.innerHTML = `<h3>${item.caption}</h3>`;
+  
+//   if (Array.isArray(item.src)) {
+//     // Jika src adalah array
+//     item.src.forEach(imgSrc => {
+//       const img = document.createElement('img');
+//       img.src = imgSrc;
+//       img.alt = item.caption;
+//       img.style.width = '300px'; // atur ukuran
+//       img.style.margin = '10px';
+//       div.appendChild(img);
+//     });
+//   } else {
+//     // Jika src string biasa
+//     const img = document.createElement('img');
+//     img.src = item.src;
+//     img.alt = item.caption;
+//     img.style.width = '300px';
+//     div.appendChild(img);
+//   }
+  
+//   container.appendChild(div);
+// });
