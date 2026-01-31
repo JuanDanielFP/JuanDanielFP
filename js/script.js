@@ -352,6 +352,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// =================== Project 1 ========================
+
 // Fungsi untuk membuka modal dengan animasi smooth
 function openProjectModal(projectId) {
     const modal = document.getElementById('projectModal');
@@ -468,6 +470,69 @@ document.getElementById('projectModal').addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' || e.key === 'Esc') {
         const modal = document.getElementById('projectModal');
+        if (!modal.classList.contains('hidden') && !isClosing) {
+            closeProjectModalSmooth();
+        }
+    }
+});
+
+
+
+
+//===================== Project 2 =========================
+
+
+// Fungsi untuk menutup modal dengan animasi smooth
+function closeProjectModal2() {
+    const modal = document.getElementById('projectModal2');
+    
+    // Remove show class and add closing animation
+    modal.classList.remove('show');
+    modal.classList.add('closing');
+    
+    // Wait for animation to complete before hiding
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex', 'closing');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }, 300); // Match with animation duration
+}
+
+// Variable to prevent multiple close calls
+//let isClosing = false;
+
+
+// Enhanced close function with debounce
+function closeProjectModalSmooth() {
+    if (isClosing) return; // Prevent multiple calls
+    
+    isClosing = true;
+    const modal = document.getElementById('projectModal2');
+    
+    // Add closing animation
+    modal.classList.remove('show');
+    modal.classList.add('closing');
+    
+    // Wait for animation to complete
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex', 'closing');
+        document.body.style.overflow = 'auto';
+        isClosing = false; // Reset flag
+    }, 350); // Slightly longer for smoother effect
+}
+
+// Close modal when clicking outside - IMPROVED
+document.getElementById('projectModal2').addEventListener('click', function(e) {
+    // Only close if clicking the backdrop (not the modal content)
+    if (e.target === this && !isClosing) {
+        closeProjectModalSmooth();
+    }
+});
+// Close modal with ESC key - IMPROVED
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+        const modal = document.getElementById('projectModal2');
         if (!modal.classList.contains('hidden') && !isClosing) {
             closeProjectModalSmooth();
         }
