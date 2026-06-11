@@ -25,5 +25,5 @@
 ✔️ Certifications\
 ✔️ Contact
 
-To view a live example, **[click here](https://juandanielfp.github.io/Portfolio/)**
+To view a live example, **[click here](https://juandanielfp.github.io/JuanDanielFP/)**
 
