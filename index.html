@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Juan Daniel - QA Engineer with 3+ years experience in banking applications">
+    <meta name="description" content="Juan Daniel - QA Engineer with 5+ years experience in banking applications">
     <meta name="keywords" content="QA Engineer, Software Testing, Manual Testing, Automation, API Testing">
     <meta name="author" content="Juan Daniel">
     
-    
     <title>Juan Daniel - QA Engineer Portfolio</title>
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Tailwind Config -->
     <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            primary: '#2563eb',
-                            secondary: '#1e40af',
-                            accent: '#8b5cf6',
-                        },
-                        animation: {
-                            'fade-in': 'fadeIn 0.6s ease-in-out',
-                            'slide-up': 'slideUp 0.6s ease-in-out',
-                        },
-                    }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#8b5cf6',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-in-out',
+                    },
                 }
             }
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                document.querySelectorAll(".skill-bar").forEach(bar => {
-                const value = bar.dataset.width;
-                bar.style.width = value + "%";
-                });
-            });
-            
-        </script>
-    </html>
+        }
+    </script>
+    
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-element {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        /* Custom Justify Text untuk List */
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
 
-    <!-- Navigation -->
     <nav class="fixed w-full top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#home" class="text-2xl font-bold text-primary">Juan Daniel</a>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <ul class="flex space-x-8">
                         <li><a href="#home" class="nav-link hover:text-primary transition">Home</a></li>
@@ -70,8 +70,9 @@
                         <li><a href="#projects" class="nav-link hover:text-primary transition">Projects</a></li>
                         <li><a href="#certifications" class="nav-link hover:text-primary transition">Certifications</a></li>
                         <li><a href="#contact" class="nav-link hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
                 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -80,7 +81,6 @@
             </div>
         </div>
         
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <ul class="px-2 pt-2 pb-3 space-y-1">
                 <li><a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100">Home</a></li>
@@ -94,13 +94,9 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center animate-fade-in">
-                <!-- Profile Image (Optional) -->
-                <!-- <img src="images/profile.jpg" alt="Juan Daniel" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-lg"> -->
-                
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
                     Juan Daniel
                 </h1>
@@ -124,13 +120,11 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- About Text -->
                 <div class="fade-in-element">
                     <h3 class="text-2xl font-bold text-primary mb-4">Professional QA Engineer</h3>
                     <p class="text-gray-600 mb-4 text-justify">
@@ -139,7 +133,7 @@
                     </p>
                     <p class="text-gray-600 mb-4 text-justify">
                         I've successfully reduced regression testing time by up to 80% and identified critical bugs before production, 
-                        ensuring seamless user experiences for millions of banking customers.
+                        ensuring seamless user experiences for millions of banking customers. I also actively engage in debugging automation scripts and handling HTTP status errors (401, 403) to ensure robust backend logic.
                     </p>
                     <p class="text-gray-600 text-justify">
                         My approach combines meticulous attention to detail with a deep understanding of business requirements, 
@@ -147,7 +141,6 @@
                     </p>
                 </div>
                 
-                <!-- Stats -->
                 <div class="grid grid-cols-2 gap-6">
                     <div class="bg-gray-50 p-6 rounded-lg text-center fade-in-element">
                         <div class="text-4xl font-bold text-primary mb-2">5+</div>
@@ -170,61 +163,54 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Technical Skills</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testing Expertise -->
                 <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
                     <h3 class="text-xl font-bold text-primary mb-6">Testing Expertise</h3>
-                    
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Manual Testing</span>
-                                <span class="text-gray-600">100%</span>
+                                <span class="text-gray-600 font-medium">Expert</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="100"></div>
                             </div>
                         </div>
-                        
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">API Testing</span>
-                                <span class="text-gray-600">90%</span>
+                                <span class="text-gray-600 font-medium">Advanced</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
                             </div>
                         </div>
-                        
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Regression Testing</span>
-                                <span class="text-gray-600">95%</span>
+                                <span class="text-gray-600 font-medium">Expert</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
                             </div>
                         </div>
-
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Smoke Testing</span>
-                                <span class="text-gray-600">85%</span>
+                                <span class="text-gray-600 font-medium">Advanced</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="85"></div>
                             </div>
                         </div>
-
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Sanity Testing</span>
-                                <span class="text-gray-600">80%</span>
+                                <span class="text-gray-600 font-medium">Advanced</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="80"></div>
@@ -233,193 +219,148 @@
                     </div>
                 </div>
                 
-                <!-- Automation Tools -->
                 <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
                     <h3 class="text-xl font-bold text-primary mb-6">Tools</h3>
-                    
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Selenium</span>
-                                <span class="text-gray-600">85%</span>
+                                <span class="text-gray-600 font-medium">Intermediate</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="85"></div>
+                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="80"></div>
                             </div>
                         </div>
-                        
-                         <div>
+                        <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Git/GitHub</span>
-                                <span class="text-gray-600">90%</span>
+                                <span class="text-gray-600 font-medium">Advanced</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
                             </div>
                         </div>
-                        
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Postman</span>
-                                <span class="text-gray-600">85%</span>
+                                <span class="text-gray-600 font-medium">Advanced</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="85"></div>
                             </div>
                         </div>
-
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">Jira</span>
-                                <span class="text-gray-600">95%</span>
+                                <span class="text-gray-600 font-medium">Expert</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
                             </div>
                         </div>
-
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">AS400</span>
-                                <span class="text-gray-600">95%</span>
+                                <span class="text-gray-600 font-medium">Expert</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 
-                <!-- Technical Skills -->
                 <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
                     <h3 class="text-xl font-bold text-primary mb-6">Technical Skills</h3>
-                    
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
                                 <span class="font-semibold">SQL</span>
-                                <span class="text-gray-600">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="80"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">JavaScript</span>
-                                <span class="text-gray-600">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="80"></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Python</span>
-                                <span class="text-gray-600">85%</span>
+                                <span class="text-gray-600 font-medium">Advanced</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="skill-bar bg-primary h-2 rounded-full" data-width="85"></div>
                             </div>
                         </div>
-                        
-                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">JavaScript</span>
+                                <span class="text-gray-600 font-medium">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Python</span>
+                                <span class="text-gray-600 font-medium">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="80"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="py-16 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Professional Experience</h2>
             
             <div class="space-y-8">
-                <!-- Experience Item 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary fade-in-element">
                     <h3 class="text-2xl font-bold text-primary mb-2">QA Engineer</h3>
                     <div class="font-semibold text-gray-800 mb-2">Bank Rakyat Indonesia</div>
                     <div class="text-gray-600 text-sm mb-4">August 2025 - Present</div>
                     
                     <div class="mb-4">
-                        <!-- Project: Qlola Platform -->
-                        <!-- <p class="font-semibold text-gray-800 mb-2">Project: Qlola Platform</p> -->
-                         <ul class="list-disc text-gray-600 space-y-2 ml-8 list-outside">
-                            <li class="text-justify">
-                                Engineered and maintained robust automation test frameworks using Selenium with Python, successfully reducing regression testing cycles by 50% and accelerating production deployment.
-                            </li>
-                            <li class="text-justify">
-                                Spearheaded comprehensive API and backend testing using Postman and Kibana/Elastic Stack, ensuring 100% data integrity, system stability, and identifying critical performance bottlenecks.
-                            </li>
-                            <li class="text-justify">
-                                Optimized application reliability for the platform by rigorously validating UI/UX design, customer data security protocols, core payment processing, transaction limits, and high-risk operations.
-                            </li>
-                            <li class="text-justify">
-                                Led the quality gate for the UI/UX Migration project, meticulously verifying complete website redesigns from Figma specifications to ensure flawless functional integrity and user experience.
-                            </li>
-                            <li class="text-justify">
-                                Proactively identified, documented, and tracked over 100 high-priority defects via Jira, collaborating closely within cross-functional Agile/Scrum teams to drive rapid issue resolution.
-                            </li>
+                        <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify">
+                            <li>Engineered and maintained robust automation test frameworks using Selenium with Python, successfully reducing regression testing cycles by 50% and accelerating production deployment.</li>
+                            <li>Spearheaded comprehensive API and backend testing using Postman and Kibana/Elastic Stack, ensuring 100% data integrity, system stability, and identifying critical performance bottlenecks.</li>
                         </ul>
+                        
+                        <div class="mt-4">
+                            <h4 class="font-bold text-gray-800 mb-2">Project: New Qlola Component 2026</h4>
+                            <ul class="list-disc text-gray-600 space-y-2 ml-8 list-outside text-justify">
+                                <li>Optimized application reliability for the platform by rigorously validating UI/UX design, customer data security protocols, core payment processing, transaction limits, and high-risk operations.</li>
+                                <li>Led the quality gate for the UI/UX Migration project, meticulously verifying complete website redesigns from Figma specifications to ensure flawless functional integrity and user experience.</li>
+                                <li>Proactively identified, documented, and tracked over 100 high-priority defects via Jira, collaborating closely within cross-functional Agile/Scrum teams to drive rapid issue resolution.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Experience Item 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary fade-in-element">
                     <h3 class="text-2xl font-bold text-primary mb-2">QA Engineer</h3>
                     <div class="font-semibold text-gray-800 mb-2">Bank UOB Indonesia</div>
                     <div class="text-gray-600 text-sm mb-4">August 2023 - May 2025</div>
                     
                     <div class="mb-4">
-                        <!-- <p class="font-semibold text-gray-800 mb-2">Project: Trade - Voyager</p> -->
-                        <ul class="list-disc text-gray-600 space-y-2 ml-8 list-outside">
-                            <li class="text-justify">
-                                Executed end-to-end manual and functional testing across high-traffic web and mobile banking applications, discovering 100+ critical bugs and improving overall release efficiency by 40%.
-                            </li>
-                            <li class="text-justify">
-                               Guaranteed backend stability and real-time history processing by conducting rigorous API validation with Postman, preventing potential transaction failures in live environments.
-                            </li>
-                            <li class="text-justify">
-                               Successfully delivered the U-Infinity Web project by validating high-value features, including tax payments and BI-FAST integrations via NIK/NPWP, securing secure and reliable real-time transactions.
-                            </li>
-                            <li class="text-justify">
-                                Maximized test coverage and payment gateway reliability for the U-4Trade Web and U-4Trade + WinSCP/AS400 platforms, analyzing system processing capacity and managing secure file transfers via FTP/FTPS.
-                            </li>
-                            <li class="text-justify">
-                                Collaborated dynamically within hybrid Waterfall and Agile/Scrum frameworks, serving as a key bridge to streamline communication and accelerate software delivery lifecycles.
-                            </li> 
+                        <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify">
+                            <li>Executed end-to-end manual and functional testing across high-traffic web and mobile banking applications, discovering 100+ critical bugs and improving overall release efficiency by 40%.</li>
+                            <li>Guaranteed backend stability and real-time history processing by conducting rigorous API validation with Postman, preventing potential transaction failures in live environments.</li>
+                            <li>Successfully delivered the U-Infinity Web project by validating high-value features, including tax payments and BI-FAST integrations via NIK/NPWP, securing secure and reliable real-time transactions.</li>
+                            <li>Maximized test coverage and payment gateway reliability for the U-4Trade Web and U-4Trade + WinSCP/AS400 platforms, analyzing system processing capacity and managing secure file transfers via FTP/FTPS.</li>
+                            <li>Collaborated dynamically within hybrid Waterfall and Agile/Scrum frameworks, serving as a key bridge to streamline communication and accelerate software delivery lifecycles.</li> 
                         </ul>
                     </div>
                 </div>
                 
-                <!-- Experience Item 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary fade-in-element">
                     <h3 class="text-2xl font-bold text-primary mb-2">QA Engineer</h3>
                     <div class="font-semibold text-gray-800 mb-2">Bank Negara Indonesia</div>
                     <div class="text-gray-600 text-sm mb-4">January 2022 - July 2023</div>
                     
                     <div>
-                        <!-- <p class="font-semibold text-gray-800 mb-2">Project: Multi-Platform Banking Solutions</p> -->
-                        <ul class="list-disc text-gray-600 space-y-2 ml-8 list-outside">
-                            <li class="text-justify">
-                                Designed and implemented standardized regression and functional testing strategies, which successfully boosted QA process efficiency by 50%.
-                            </li>
-                            <li class="text-justify">
-                               Managed System Integration Testing (SIT) and facilitated live User Acceptance Testing (UAT) sessions, effectively aligning technical deliverables with business requirements alongside key stakeholders.
-                            </li>
-                            <li class="text-justify">
-                               Secured the launch of core digital payment features, including the Tapcash/E-Toll ecosystem (validating NFC e-money chips and Tapcash GO integrations) and ensuring seamless real-time synchronization forMbanking BNI.
-                            </li>
-                            <li class="text-justify">
-                                Constructed comprehensive test scenarios for the Credit Card/ATM Simulator, validating end-to-end ATM hardware and software integrations to minimize transactional errors.
-                            </li>
-                            <li class="text-justify">
-                                Leveraged JIRA for advanced bug tracking and established clear communication protocols between QA and development teams, reducing friction and minimizing time-to-resolution.
-                            </li> 
+                        <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify">
+                            <li>Designed and implemented standardized regression and functional testing strategies, which successfully boosted QA process efficiency by 50%.</li>
+                            <li>Managed System Integration Testing (SIT) and facilitated live User Acceptance Testing (UAT) sessions, effectively aligning technical deliverables with business requirements alongside key stakeholders.</li>
+                            <li>Secured the launch of core digital payment features, including the Tapcash/E-Toll ecosystem (validating NFC e-money chips and Tapcash GO integrations) and ensuring seamless real-time synchronization for Mbanking BNI.</li>
+                            <li>Constructed comprehensive test scenarios for the Credit Card/ATM Simulator, validating end-to-end ATM hardware and software integrations to minimize transactional errors.</li>
+                            <li>Leveraged JIRA for advanced bug tracking and established clear communication protocols between QA and development teams, reducing friction and minimizing time-to-resolution.</li> 
                         </ul>
                     </div>
                 </div>
@@ -427,1171 +368,160 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Professional Projects</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <!-- <img src="images/projects/profile.jpg" alt="Project" class="w-full h-auto object-cover"> -->
-                    <div class="p-6"> 
+                    <div class="p-6 flex flex-col h-full"> 
                         <h3 class="text-xl font-bold text-primary mb-3">Qlola Platform</h3>
-                        <p class="text-gray-600 mb-4 text-justify">
-                            Validated UI/UX, Customer Data Security, Payment Processing, Transaction Limits, Midnight Batch Processing, 
-                            and Negative Scenarios. 
-                            Verified complete website redesign from Figma specifications ensuring functional integrity.
+                        <p class="text-gray-600 mb-4 text-justify flex-grow">
+                            Validated UI/UX, Customer Data Security, Payment Processing, Transaction Limits, Midnight Batch Processing, and Negative Scenarios. Verified complete website redesign from Figma specifications ensuring functional integrity.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Jira</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Spreadsheet</span>
                         </div>
-
-                        <button onclick="openProjectModal('project1')" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                        <button onclick="openProjectModal('project1')" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center">
                             View Project
                         </button>
-
-                        <!-- Modal Popup untuk Gallery -->
-                        <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-                            <div class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                                <!-- Close Button -->
-                                <button onclick="closeProjectModal()" class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
-                                    &times;
-                                </button>
-                                
-                                <!-- Modal Content -->
-                                <div id="modalContent" class="p-6 sm:p-8">
-                                    <!-- Content will be dynamically loaded here -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="gallery"></div>
-                            
-                        <script>
-                            
-                            // Data project dengan gambar-gambarnya
-                            const projectData = {
-                                project1: {
-                                    title: "Qlola Platform",
-                                    description: "Complete testing documentation and screenshots from Qlola Platform project",
-                                    images: [
-                                        {
-                                            src: "images/BRI/Dashboard-Qlola-1.jpeg",
-                                            caption: "Dashboard Overview"
-                                        },
-                                        {
-                                            src: "images/BRI/Dashboard-Qlola-2.jpeg",
-                                            caption: "Payment Processing Interface"
-                                        },
-                                        {
-                                            src: "images/BRI/Test-Case-1.jpg",
-                                            caption: "Test Case"
-                                        },
-                                        {
-                                            src: "images/BRI/Bug-List-1.jpg",
-                                            caption: "Bug List"
-                                        },
-                                        {
-                                            src: "images/BRI/Jira-Issue-1.jpg",
-                                            caption: "Report Bug"
-                                        },
-                                        {
-                                            src: "images/BRI/Confluence-1.jpg",
-                                            caption: "Evidence"
-                                        },
-                                        {
-                                            src: "images/BRI/Figma-1.jpg",
-                                            caption: "Figma"
-                                        }
-                                    ],
-                                    details: "Validated UI/UX, Customer Data Security, Payment Processing, Transaction Limits, Midnight Batch Processing, and Negative Scenarios. Verified complete website redesign from Figma specifications ensuring functional integrity.",
-                                    technologies: ["Manual Testing", "Postman", "MySQL", "Jira"]
-                                },
-                            };
-                            
-                            // Fungsi untuk membuka modal dengan animasi
-                            function openProjectModal(projectId) {
-                                const modal = document.getElementById('projectModal');
-                                const modalContent = document.getElementById('modalContent');
-                                const project = projectData[projectId];
-
-                                if (!project) return;
-
-                                // Generate HTML content dengan stagger animation
-                                let imagesHTML = '';
-                                project.images.forEach((image, index) => {
-                                    imagesHTML += `
-                                        <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out ${index * 0.1}s forwards;">
-                                            <img src="${image.src}" 
-                                                alt="${image.caption}" 
-                                                class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300"
-                                                onclick="openImageFullscreen('${image.src}')"
-                                                onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
-                                            <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
-                                        </div>
-                                    `;
-                                });
-
-                                let technologiesHTML = '';
-                                project.technologies.forEach((tech, index) => {
-                                    technologiesHTML += `
-                                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block opacity-0" style="animation: fadeInUp 0.4s ease-out ${index * 0.05 + 0.2}s forwards;">${tech}</span>
-                                    `;
-                                });
-
-                                modalContent.innerHTML = `
-                                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out forwards;">
-                                        ${project.title}
-                                    </h2>
-                                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify opacity-0" style="animation: fadeInUp 0.5s ease-out 0.1s forwards;">
-                                        ${project.details}
-                                    </p>
-                                    
-                                    <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.15s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
-                                        <div class="flex flex-wrap">
-                                            ${technologiesHTML}
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.2s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
-                                        <div class="space-y-6">
-                                            ${imagesHTML}
-                                        </div>
-                                    </div>
-                                `;
-
-                                // Show modal with animation
-                                modal.classList.remove('hidden', 'closing');
-                                modal.classList.add('flex');
-                                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                            }
-
-                            // Fungsi untuk menutup modal dengan animasi
-                            function closeProjectModal() {
-                                const modal = document.getElementById('projectModal');
-                                
-                                // Add closing animation
-                                modal.classList.add('closing');
-                                
-                                // Wait for animation to complete before hiding
-                                setTimeout(() => {
-                                    modal.classList.add('hidden');
-                                    modal.classList.remove('flex', 'closing');
-                                    document.body.style.overflow = 'auto'; // Restore scrolling
-                                }, 300); // Match with animation duration
-                            }
-
-                            // Fungsi untuk fullscreen image dengan animasi
-                            function openImageFullscreen(src) {
-                                const fullscreenDiv = document.createElement('div');
-                                fullscreenDiv.className = 'fullscreen-overlay fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-[60] p-4 cursor-pointer';
-                                
-                                fullscreenDiv.innerHTML = `
-                                    <button class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 hover:rotate-90 transition-all duration-300 bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">&times;</button>
-                                    <img src="${src}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" alt="Fullscreen Image">
-                                    <p class="absolute bottom-4 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded-full">Click anywhere to close</p>
-                                `;
-                                
-                                // Close on click anywhere
-                                fullscreenDiv.onclick = function(e) {
-                                    fullscreenDiv.style.animation = 'fadeOut 0.3s ease-out';
-                                    setTimeout(() => {
-                                        document.body.removeChild(fullscreenDiv);
-                                    }, 300);
-                                };
-                                
-                                document.body.appendChild(fullscreenDiv);
-                            }
-
-                            // Close modal when clicking outside
-                            document.getElementById('projectModal').addEventListener('click', function(e) {
-                                if (e.target === this) {
-                                    closeProjectModal();
-                                }
-                            });
-
-                            // Close modal with ESC key
-                            document.addEventListener('keydown', function(e) {
-                                if (e.key === 'Escape') {
-                                    const modal = document.getElementById('projectModal');
-                                    if (!modal.classList.contains('hidden')) {
-                                        closeProjectModal();
-                                    }
-                                }
-                            });
-                        </script>
-
-                        <!-- Add fadeInUp animation in style tag or CSS file -->
-                        <style>
-                        @keyframes fadeInUp {
-                            from {
-                                opacity: 0;
-                                transform: translateY(20px);
-                            }
-                            to {
-                                opacity: 1;
-                                transform: translateY(0);
-                            }
-                        }
-                        </style>
-
                     </div>
                 </div> 
                 
-                <!-- Project 2 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col h-full">
                         <h3 class="text-xl font-bold text-primary mb-3">U-Infinity Web</h3>
-                        <p class="text-gray-600 mb-4 text-justify">
-                            Validated tax payment and BIFAST features using NIK/NPWP with real-time transaction history
-                            Modern E2E testing framework for web applications with comprehensive test coverage and reporting.
+                        <p class="text-gray-600 mb-4 text-justify flex-grow">
+                            Validated tax payment and BIFAST features using NIK/NPWP with real-time transaction history. Modern E2E testing framework for web applications with comprehensive test coverage.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-4 text-justify">
+                        <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">SQL</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">AS400</span>
                         </div>
-                        <button onclick="openProjectModal2('project2')" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                        <button onclick="openProjectModal('project2')" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center">
                             View Project
                         </button>
-
-                        <!-- Modal Popup untuk Gallery -->
-                        <div id="projectModal2" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-                            <div class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                                <!-- Close Button -->
-                                <button onclick="closeProjectModal2()" class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
-                                    &times;
-                                </button>
-                                
-                                <!-- Modal Content -->
-                                <div id="modalContent2" class="p-6 sm:p-8">
-                                    <!-- Content will be dynamically loaded here -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="gallery2"></div>
-                        <script>
-                        // Data project dengan gambar-gambarnya
-                            const projectData2 = {
-                                project2: {
-                                    title: "U-Infinity Web",
-                                    description: "Validated tax payment and BIFAST features using NIK/NPWP with real-time transaction history Modern E2E testing framework for web applications with comprehensive test coverage and reporting",
-                                    images: [
-                                        {
-                                            src: "images/UOB/Dashboard-1.png",
-                                            caption: "Dashboard Overview"
-                                        },
-                                        {
-                                            src: "images/UOB/Dashboard-3.png",
-                                            caption: "Payment Processing Interface"
-                                        },
-                                        {
-                                            src: "images/UOB/Status-Trx-PSIAP-1.png",
-                                            caption: "History Transaction"
-                                        },
-                                        {
-                                            src: "images/UOB/Log-AS400-1.png",
-                                            caption: "Dashboard Check Log"
-                                        },
-                                        {
-                                            src: "images/UOB/Log-AS400-2.png",
-                                            caption: "Menu Log"
-                                        },
-                                    ],
-                                    details: "Validated tax payment and BIFAST features using NIK/NPWP with real-time transaction history Modern E2E testing framework for web applications with comprehensive test coverage and reporting.",
-                                    technologies: ["Manual Testing", "MySQL", "AS400"]
-                                },
-                            };
-                            
-                            // Fungsi untuk membuka modal dengan animasi
-                            function openProjectModal2(projectId) {
-                                const modal2 = document.getElementById('projectModal2');
-                                const modalContent2 = document.getElementById('modalContent2');
-                                const project2 = projectData2[projectId];
-
-                                if (!project2) return;
-
-                                // Generate HTML content dengan stagger animation
-                                let imagesHTML = '';
-                                project2.images.forEach((image, index) => {
-                                    imagesHTML += `
-                                        <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out ${index * 0.1}s forwards;">
-                                            <img src="${image.src}" 
-                                                alt="${image.caption}" 
-                                                class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300"
-                                                onclick="openImageFullscreen('${image.src}')"
-                                                onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
-                                            <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
-                                        </div>
-                                    `;
-                                });
-
-                                let technologiesHTML = '';
-                                project2.technologies.forEach((tech, index) => {
-                                    technologiesHTML += `
-                                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block opacity-0" style="animation: fadeInUp 0.4s ease-out ${index * 0.05 + 0.2}s forwards;">${tech}</span>
-                                    `;
-                                });
-
-                                modalContent2.innerHTML = `
-                                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out forwards;">
-                                        ${project2.title}
-                                    </h2>
-                                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify opacity-0" style="animation: fadeInUp 0.5s ease-out 0.1s forwards;">
-                                        ${project2.details}
-                                    </p>
-                                    
-                                    <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.15s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
-                                        <div class="flex flex-wrap">
-                                            ${technologiesHTML}
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.2s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
-                                        <div class="space-y-6">
-                                            ${imagesHTML}
-                                        </div>
-                                    </div>
-                                `;
-
-                                // Show modal with animation
-                                modal2.classList.remove('hidden', 'closing');
-                                modal2.classList.add('flex');
-                                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                            }
-
-                            // Fungsi untuk menutup modal dengan animasi
-                            function closeProjectModal2() {
-                                const modal2 = document.getElementById('projectModal2');
-                                
-                                // Add closing animation
-                                modal2.classList.add('closing');
-                                
-                                // Wait for animation to complete before hiding
-                                setTimeout(() => {
-                                    modal2.classList.add('hidden');
-                                    modal2.classList.remove('flex', 'closing');
-                                    document.body.style.overflow = 'auto'; // Restore scrolling
-                                }, 300); // Match with animation duration
-                            }
-
-                            // Fungsi untuk fullscreen image dengan animasi
-                            function openImageFullscreen(src) {
-                                const fullscreenDiv = document.createElement('div');
-                                fullscreenDiv.className = 'fullscreen-overlay fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-[60] p-4 cursor-pointer';
-                                
-                                fullscreenDiv.innerHTML = `
-                                    <button class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 hover:rotate-90 transition-all duration-300 bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">&times;</button>
-                                    <img src="${src}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" alt="Fullscreen Image">
-                                    <p class="absolute bottom-4 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded-full">Click anywhere to close</p>
-                                `;
-                                
-                                // Close on click anywhere
-                                fullscreenDiv.onclick = function(e) {
-                                    fullscreenDiv.style.animation = 'fadeOut 0.3s ease-out';
-                                    setTimeout(() => {
-                                        document.body.removeChild(fullscreenDiv);
-                                    }, 300);
-                                };
-                                
-                                document.body.appendChild(fullscreenDiv);
-                            }
-
-                            // Close modal when clicking outside
-                            document.getElementById('projectModal2').addEventListener('click', function(e) {
-                                if (e.target === this) {
-                                    closeProjectModal2();
-                                }
-                            });
-
-                            // Close modal with ESC key
-                            document.addEventListener2('keydown', function(e) {
-                                if (e.key === 'Escape') {
-                                    const modal2 = document.getElementById('projectModal2');
-                                    if (!modal2.classList.contains('hidden')) {
-                                        closeProjectModal2();
-                                    }
-                                }
-                            });
-
-                        </script>
-
-                        <!-- Add fadeInUp animation in style tag or CSS file -->
-                        <style>
-                        @keyframes fadeInUp {
-                            from {
-                                opacity: 0;
-                                transform: translateY(20px);
-                            }
-                            to {
-                                opacity: 1;
-                                transform: translateY(0);
-                            }
-                        }
-                        </style>
-
                     </div>
                 </div>
                 
-                <!-- Project 3 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-primary mb-3">U-4 Trade Core Banking</h3>
-                        <p class="text-gray-600 mb-4 text-justify">
-                            Developed test scenarios for payment gateway and enhanced test coverage.
-                            Tested payment transactions via FTP/FTPS, analyzing processing capacity and performance.
+                     <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-bold text-primary mb-3">U-4Trade Core Banking</h3>
+                        <p class="text-gray-600 mb-4 text-justify flex-grow">
+                            Developed test scenarios for payment gateway and enhanced test coverage. Tested payment transactions via FTP/FTPS, analyzing processing capacity and performance.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-4 text-justify">
+                        <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">SQL</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">AS400</span>
                         </div>
-                        <button onclick="openProjectModal3('project3')" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                        <button onclick="openProjectModal('project3')" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center">
                             View Project
                         </button>
-
-                        <!-- Modal Popup untuk Gallery -->
-                        <div id="projectModal3" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-                            <div class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                                <!-- Close Button -->
-                                <button onclick="closeProjectModal3()" class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
-                                    &times;
-                                </button>
-                                
-                                <!-- Modal Content -->
-                                <div id="modalContent3" class="p-6 sm:p-8">
-                                    <!-- Content will be dynamically loaded here -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="gallery3"></div>
-
-                        <script>
-                            
-                            // Data project dengan gambar-gambarnya
-                            const projectData3 = {
-                                project3: {
-                                    title: "U-4Trade",
-                                    description: "Developed test scenarios for payment gateway and enhanced test coverage. Tested payment transactions via FTP/FTPS, analyzing processing capacity and performance.",
-                                    images: [
-                                        {
-                                            src: "images/UOB/Dashboard-2.png",
-                                            caption: "Dashboard Overview"
-                                        },
-                                        {
-                                            src: "images/UOB/BI-FAST-3.png",
-                                            caption: "Payment Processing Interface"
-                                        },
-                                        {
-                                            src: "images/UOB/Status-Trx-PSIAP-1.png",
-                                            caption: "History Transaction"
-                                        },
-                                        {
-                                            src: "images/UOB/Log-AS400-1.png",
-                                            caption: "Dashboard Check Log"
-                                        },
-                                        {
-                                            src: "images/UOB/Log-AS400-2.png",
-                                            caption: "Menu Log"
-                                        },
-                                    ],
-                                    details: "Developed test scenarios for payment gateway and enhanced test coverage. Tested payment transactions via FTP/FTPS, analyzing processing capacity and performance.",
-                                    technologies: ["Manual Testing", "MySQL", "AS400"]
-                                },
-                            };
-
-                            // Fungsi untuk membuka modal dengan animasi
-                            function openProjectModal3(projectId) {
-                                const modal3 = document.getElementById('projectModal3');
-                                const modalContent3 = document.getElementById('modalContent3');
-                                const project3 = projectData3[projectId];
-
-                                if (!project3) return;
-
-                                // Generate HTML content dengan stagger animation
-                                let imagesHTML = '';
-                                project3.images.forEach((image, index) => {
-                                    imagesHTML += `
-                                        <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out ${index * 0.1}s forwards;">
-                                            <img src="${image.src}" 
-                                                alt="${image.caption}" 
-                                                class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300"
-                                                onclick="openImageFullscreen('${image.src}')"
-                                                onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
-                                            <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
-                                        </div>
-                                    `;
-                                });
-
-                                let technologiesHTML = '';
-                                project3.technologies.forEach((tech, index) => {
-                                    technologiesHTML += `
-                                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block opacity-0" style="animation: fadeInUp 0.4s ease-out ${index * 0.05 + 0.2}s forwards;">${tech}</span>
-                                    `;
-                                });
-
-                                modalContent3.innerHTML = `
-                                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out forwards;">
-                                        ${project3.title}
-                                    </h2>
-                                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify opacity-0" style="animation: fadeInUp 0.5s ease-out 0.1s forwards;">
-                                        ${project3.details}
-                                    </p>
-                                    
-                                    <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.15s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
-                                        <div class="flex flex-wrap">
-                                            ${technologiesHTML}
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.2s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
-                                        <div class="space-y-6">
-                                            ${imagesHTML}
-                                        </div>
-                                    </div>
-                                `;
-                                // Show modal with animation
-                                modal3.classList.remove('hidden', 'closing');
-                                modal3.classList.add('flex');
-                                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                            }
-
-                            // Fungsi untuk menutup modal dengan animasi
-                            function closeProjectModal3() {
-                                const modal3 = document.getElementById('projectModal3');
-                                
-                                // Add closing animation
-                                modal3.classList.add('closing');
-                                
-                                // Wait for animation to complete before hiding
-                                setTimeout(() => {
-                                    modal3.classList.add('hidden');
-                                    modal3.classList.remove('flex', 'closing');
-                                    document.body.style.overflow = 'auto'; // Restore scrolling
-                                }, 300); // Match with animation duration
-                            } 
-                            
-                            // Fungsi untuk fullscreen image dengan animasi
-                            function openImageFullscreen(src) {
-                                const fullscreenDiv = document.createElement('div');
-                                fullscreenDiv.className = 'fullscreen-overlay fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-[60] p-4 cursor-pointer';
-                                
-                                fullscreenDiv.innerHTML = `
-                                    <button class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 hover:rotate-90 transition-all duration-300 bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">&times;</button>
-                                    <img src="${src}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" alt="Fullscreen Image">
-                                    <p class="absolute bottom-4 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded-full">Click anywhere to close</p>
-                                `;
-                                
-                                // Close on click anywhere
-                                fullscreenDiv.onclick = function(e) {
-                                    fullscreenDiv.style.animation = 'fadeOut 0.3s ease-out';
-                                    setTimeout(() => {
-                                        document.body.removeChild(fullscreenDiv);
-                                    }, 300);
-                                };
-                                
-                                document.body.appendChild(fullscreenDiv);
-                            }
-
-                            // Close modal when clicking outside
-                            document.getElementById('projectModal3').addEventListener('click', function(e) {
-                                if (e.target === this) {
-                                    closeProjectModal3();
-                                }
-                            });
-
-                            // Close modal with ESC key
-                            document.addEventListener3('keydown', function(e) {
-                                if (e.key === 'Escape') {
-                                    const modal3 = document.getElementById('projectModal3');
-                                    if (!modal3.classList.contains('hidden')) {
-                                        closeProjectModal3();
-                                    }
-                                }
-                            })
-                        </script>        
                     </div>
                 </div>
                 
-                <!-- Project 4 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col h-full">
                         <h3 class="text-xl font-bold text-primary mb-3">Credit Card/ATM Simulator</h3>
-                        <p class="text-gray-600 mb-4 text-justify">
-                            Test cases for electronic money system including reader validation and transaction flow testing.
+                        <p class="text-gray-600 mb-4 text-justify flex-grow">
+                            Executed comprehensive test cases for electronic money systems, including reader validation, transaction flow testing, and error scenario handling.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-4 text-justify">
+                        <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">ATM Simulator</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Excel</span>
                         </div>
-                        <button onclick="openProjectModal4('project4')" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                        <button onclick="openProjectModal('project4')" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center">
                             View Project
                         </button>
-
-                        <!-- Modal Popup untuk Gallery -->
-                        <div id="projectModal4" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-                            <div class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                                <!-- Close Button -->
-                                <button onclick="closeProjectModal4()" class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
-                                    &times;
-                                </button>
-                                
-                                <!-- Modal Content -->
-                                <div id="modalContent4" class="p-6 sm:p-8">
-                                    <!-- Content will be dynamically loaded here -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="gallery4"></div>
-                        <script>
-                            
-                            // Data project dengan gambar-gambarnya
-                            const projectData4 = {
-                                project4: {
-                                    title: "Credit Card/ATM Simulator",
-                                    description: "Test cases for electronic money system including reader validation and transaction flow testing.",
-                                    images: [
-                                        {
-                                            src: "images/BNI/ATM-1.jpg",
-                                            caption: "Dashboard ATM Simulator"
-                                        },
-                                        {
-                                            src: "images/BNI/ATM-2.jpg",
-                                            caption: "Process Topup E-Money "
-                                        },
-                                        {
-                                            src: "images/BNI/ATM-4.jpg",
-                                            caption: "Card Testing E-Money"
-                                        },
-                                        {
-                                            src: "images/BNI/ATM-Struk-1.jpg",
-                                            caption: "Transaction ATM Struck Success"
-                                        },
-                                        {
-                                            src: "images/BNI/Defect-1.jpg",
-                                            caption: "Defect List"
-                                        },
-                                        
-                                    ],
-                                    details: "Test cases for electronic money system including reader validation and transaction flow testing.",
-                                    technologies: ["Manual Testing", "ATM Simulator", "Excel"]
-                                },
-                            };
-
-                            // Fungsi untuk membuka modal dengan animasi
-                            function openProjectModal4(projectId) {
-                                const modal4 = document.getElementById('projectModal4');
-                                const modalContent4 = document.getElementById('modalContent4');
-                                const project4 = projectData4[projectId];
-
-                                if (!project4) return;
-
-                                // Generate HTML content dengan stagger animation
-                                let imagesHTML = '';
-                                project4.images.forEach((image, index) => {
-                                    imagesHTML += `
-                                        <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out ${index * 0.1}s forwards;">
-                                            <img src="${image.src}" 
-                                                alt="${image.caption}" 
-                                                class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300"
-                                                onclick="openImageFullscreen('${image.src}')"
-                                                onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
-                                            <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
-                                        </div>
-                                    `;
-                                });
-
-                                let technologiesHTML = '';
-                                project4.technologies.forEach((tech, index) => {
-                                    technologiesHTML += `
-                                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block opacity-0" style="animation: fadeInUp 0.4s ease-out ${index * 0.05 + 0.2}s forwards;">${tech}</span>
-                                    `;
-                                });
-                                modalContent4.innerHTML = `
-                                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out forwards;">
-                                        ${project4.title}
-                                    </h2>
-                                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify opacity-0" style="animation: fadeInUp 0.5s ease-out 0.1s forwards;">
-                                        ${project4.details}
-                                    </p>
-                                    
-                                    <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.15s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
-                                        <div class="flex flex-wrap">
-                                            ${technologiesHTML}
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.2s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
-                                        <div class="space-y-6">
-                                            ${imagesHTML}
-                                        </div>
-                                    </div>
-                                `;
-                                // Show modal with animation
-                                modal4.classList.remove('hidden', 'closing');
-                                modal4.classList.add('flex');
-                                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                            }
-
-                            // Fungsi untuk menutup modal dengan animasi
-                            function closeProjectModal4() {
-                                const modal4 = document.getElementById('projectModal4');
-                                
-                                // Add closing animation
-                                modal4.classList.add('closing');
-                                
-                                // Wait for animation to complete before hiding
-                                setTimeout(() => {
-                                    modal4.classList.add('hidden');
-                                    modal4.classList.remove('flex', 'closing');
-                                    document.body.style.overflow = 'auto'; // Restore scrolling
-                                }, 300); // Match with animation duration
-                            } 
-
-                            // Fungsi untuk fullscreen image dengan animasi
-                            function openImageFullscreen(src) {
-                                const fullscreenDiv = document.createElement('div');
-                                fullscreenDiv.className = 'fullscreen-overlay fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-[60] p-4 cursor-pointer';
-                                
-                                fullscreenDiv.innerHTML = `
-                                    <button class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 hover:rotate-90 transition-all duration-300 bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">&times;</button>
-                                    <img src="${src}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" alt="Fullscreen Image">
-                                    <p class="absolute bottom-4 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded-full">Click anywhere to close</p>
-                                `;
-                                
-                                // Close on click anywhere
-                                fullscreenDiv.onclick = function(e) {
-                                    fullscreenDiv.style.animation = 'fadeOut 0.3s ease-out';
-                                    setTimeout(() => {
-                                        document.body.removeChild(fullscreenDiv);
-                                    }, 300);
-                                };
-                                
-                                document.body.appendChild(fullscreenDiv);
-                            }
-
-                            // Close modal when clicking outside
-                            document.getElementById('projectModal4').addEventListener('click', function(e) {
-                                if (e.target === this) {
-                                    closeProjectModal4();
-                                }
-                            });
-
-                            // Close modal with ESC key
-                            document.addEventListener4('keydown', function(e) {
-                                if (e.key === 'Escape') {
-                                    const modal4 = document.getElementById('projectModal4');
-                                    if (!modal4.classList.contains('hidden')) {
-                                        closeProjectModal4();
-                                    }
-                                }
-                            })
-                        </script>
                     </div>
                 </div>
                 
-                <!-- Project 5 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col h-full">
                         <h3 class="text-xl font-bold text-primary mb-3">Tapcash/E-Money</h3>
-                        <p class="text-gray-600 mb-4 text-justify">
-                            Validated NFC e-money chip payment and Tapcash GO integration.
+                        <p class="text-gray-600 mb-4 text-justify flex-grow">
+                            Validated NFC e-money chip payment capabilities and complete end-to-end integration mapping for the Tapcash GO ecosystem.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-4 text-justify">
+                        <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">E-Money</span>
                             <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">EDC</span>
                         </div>
-                        <button onclick="openProjectModal5('project5')" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                        <button onclick="openProjectModal('project5')" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center">
                             View Project
                         </button>
-
-                         <!-- Modal Popup untuk Gallery -->
-                        <div id="projectModal5" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-                            <div class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                                <!-- Close Button -->
-                                <button onclick="closeProjectModal5()" class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
-                                    &times;
-                                </button>
-                                
-                                <!-- Modal Content -->
-                                <div id="modalContent5" class="p-6 sm:p-8">
-                                    <!-- Content will be dynamically loaded here -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="gallery5"></div>
-                        <script>
-                        // Data project dengan gambar-gambarnya
-                            const projectData5 = {
-                                project5: {
-                                    title: "Tapcash/E-Money",
-                                    description: "Validated NFC e-money chip payment and Tapcash GO integration.",
-                                    images: [
-                                        {
-                                            src: "images/BNI/EDC-2.jpg",
-                                            caption: "Tap Card E-Money"
-                                        },
-                                        {
-                                            src: "images/BNI/EDC-3.jpg",
-                                            caption: "Balance Card"
-                                        },
-                                        
-                                        {
-                                            src: "images/BNI/EDC-4.jpg",
-                                            caption: "Process Purchase"
-                                        },
-                                        {
-                                            src: "images/BNI/EDC-1.jpg",
-                                            caption: "Purchase Success"
-                                        },
-                                        
-                                    ],
-                                    details: "Validated NFC e-money chip payment and Tapcash GO integration.",
-                                    technologies: ["Manual Testing", "E-Money", "EDC"]
-                                },
-                            };
-
-                            // Fungsi untuk membuka modal dengan animasi
-                            function openProjectModal5(projectId) {
-                                const modal5 = document.getElementById('projectModal5');
-                                const modalContent5 = document.getElementById('modalContent5');
-                                const project5 = projectData5[projectId];
-
-                                if (!project5) return;
-
-                                // Generate HTML content dengan stagger animation
-                                let imagesHTML = '';
-                                project5.images.forEach((image, index) => {
-                                    imagesHTML += `
-                                        <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out ${index * 0.1}s forwards;">
-                                            <img src="${image.src}" 
-                                                alt="${image.caption}" 
-                                                class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300"
-                                                onclick="openImageFullscreen('${image.src}')"
-                                                onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
-                                            <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
-                                        </div>
-                                    `;
-                                });
-
-                                let technologiesHTML = '';
-                                project5.technologies.forEach((tech, index) => {
-                                    technologiesHTML += `
-                                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block opacity-0" style="animation: fadeInUp 0.4s ease-out ${index * 0.05 + 0.2}s forwards;">${tech}</span>
-                                    `;
-                                });
-                                modalContent5.innerHTML = `
-                                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out forwards;">
-                                        ${project5.title}
-                                    </h2>
-                                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify opacity-0" style="animation: fadeInUp 0.5s ease-out 0.1s forwards;">
-                                        ${project5.details}
-                                    </p>
-                                    
-                                    <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.15s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
-                                        <div class="flex flex-wrap">
-                                            ${technologiesHTML}
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.2s forwards;">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
-                                        <div class="space-y-6">
-                                            ${imagesHTML}
-                                        </div>
-                                    </div>
-                                `;
-                                // Show modal with animation
-                                modal5.classList.remove('hidden', 'closing');
-                                modal5.classList.add('flex');
-                                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                            }
-
-                            // Fungsi untuk menutup modal dengan animasi
-                            function closeProjectModal5() {
-                                const modal5 = document.getElementById('projectModal5');
-                                
-                                // Add closing animation
-                                modal5.classList.add('closing');
-                                
-                                // Wait for animation to complete before hiding
-                                setTimeout(() => {
-                                    modal5.classList.add('hidden');
-                                    modal5.classList.remove('flex', 'closing');
-                                    document.body.style.overflow = 'auto'; // Restore scrolling
-                                }, 300); // Match with animation duration
-                            }
-
-                            // Fungsi untuk fullscreen image dengan animasi
-                            function openImageFullscreen(src) {
-                                const fullscreenDiv = document.createElement('div');
-                                fullscreenDiv.className = 'fullscreen-overlay fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-[60] p-4 cursor-pointer';
-                                
-                                fullscreenDiv.innerHTML = `
-                                    <button class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 hover:rotate-90 transition-all duration-300 bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">&times;</button>
-                                    <img src="${src}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" alt="Fullscreen Image">
-                                    <p class="absolute bottom-4 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded-full">Click anywhere to close</p>
-                                `;
-                                
-                                // Close on click anywhere
-                                fullscreenDiv.onclick = function(e) {
-                                    fullscreenDiv.style.animation = 'fadeOut 0.3s ease-out';
-                                    setTimeout(() => {
-                                        document.body.removeChild(fullscreenDiv);
-                                    }, 300);
-                                };
-                                
-                                document.body.appendChild(fullscreenDiv);
-                            }
-
-                            // Close modal when clicking outside
-                            document.getElementById('projectModal5').addEventListener('click', function(e) {
-                                if (e.target === this) {
-                                    closeProjectModal5();
-                                }
-                            });
-
-                            // Close modal with ESC key
-                            document.addEventListener5('keydown', function(e) {
-                                if (e.key === 'Escape') {
-                                    const modal5 = document.getElementById('projectModal5');
-                                    if (!modal5.classList.contains('hidden')) {
-                                        closeProjectModal5();
-                                    }
-                                }
-                            })
-
-                        </script>
                     </div>
                 </div>
                 
-                <!-- Project 6 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col h-full">
                         <h3 class="text-xl font-bold text-primary mb-3">Mobile Banking BNI</h3>
-                        <p class="text-gray-600 mb-4 text-justify">
-                            Ensured real-time feature updates and data synchronization for cross-platform testing (Android, IOS, Huawei).
+                        <p class="text-gray-600 mb-4 text-justify flex-grow">
+                            Ensured real-time feature updates and data synchronization for cross-platform functionality testing across Android, iOS, and Huawei devices.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-4 text-justify">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual testing</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Excel</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">E-Money</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Mobile Banking</span>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Cross-Platform Testing</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Mobile App</span>
                         </div>
-                        <button onclick="openProjectModal6('project6')" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition">
+                        <button onclick="openProjectModal('project6')" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center">
                             View Project
                         </button>
-
-                        <!-- Modal Popup untuk Gallery -->
-                        <div id="projectModal6" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-                            <div class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                                <!-- Close Button -->
-                                <button onclick="closeProjectModal6()" class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
-                                    &times;
-                                </button>
-                                
-                                <!-- Modal Content -->
-                                <div id="modalContent6" class="p-6 sm:p-8">
-                                    <!-- Content will be dynamically loaded here -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="gallery6"></div>
-
-                        <script>
-                        // Data project dengan gambar-gambarnya
-                            const projectData6 = {
-                                project6: {
-                                    title: "Mobile Banking BNI",
-                                    description: "Ensured real-time feature updates and data synchronization for cross-platform testing.",
-                                    images: [
-                                        {
-                                            src: "images/BNI/Mbanking-2.jpg",
-                                            caption: "Dashboard Mobile Banking"
-                                        },
-                                        {
-                                            src: "images/BNI/Mbanking-1.jpg",
-                                            caption: "Last History E-Money"
-                                        },
-                                        {
-                                            src: "images/BNI/Test-Case-1.jpg",
-                                            caption: "Test Case Mbanking"
-                                        },
-                                        {
-                                            src: "images/BNI/Test-Case-1-Mbanking.jpg",
-                                            caption: "Test Case Mbanking"
-                                            
-                                        },
-                                        {
-                                            src: "images/BNI/Defect-1-Mbanking.jpg",
-                                            caption: "Defect Mbanking"
-                                            
-                                        },
-                                        {
-                                            src: "images/BNI/Defect-2.jpg",
-                                            caption: "Defect Mbanking"
-                                            
-                                        },
-                                        
-                                    ],
-                                    details: "Ensured real-time feature updates and data synchronization for cross-platform testing (Android, IOS, Huawei).",
-                                    technologies: ["Manual Testing", "Excel", "E-Money", "Mobile Banking"]
-                                },
-                            };
-
-                            // Fungsi untuk membuka modal dengan animasi
-                            function openProjectModal6(projectId) {
-                                const modal6 = document.getElementById('projectModal6');
-                                const modalContent6 = document.getElementById('modalContent6');
-                                const project6 = projectData6[projectId];
-
-                                if (!project6) return;
-
-                                // Generate HTML content dengan stagger animation
-                                let imagesHTML = '';
-                                project6.images.forEach((image, index) => {
-                                    imagesHTML += `
-                                        <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out ${index * 0.1}s forwards;">
-                                            <img src="${image.src}" 
-                                                alt="${image.caption}" 
-                                                class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300"
-                                                onclick="openImageFullscreen('${image.src}')"
-                                                onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
-                                            <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
-                                        </div>
-                                    `;
-                                });
-                            
-                                let technologiesHTML = '';
-                                    project6.technologies.forEach((tech, index) => {
-                                        technologiesHTML += `
-                                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block opacity-0" style="animation: fadeInUp 0.4s ease-out ${index * 0.05 + 0.2}s forwards;">${tech}</span>
-                                        `;
-                                    });
-                                    modalContent6.innerHTML = `
-                                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out forwards;">
-                                            ${project6.title}
-                                        </h2>
-                                        <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify opacity-0" style="animation: fadeInUp 0.5s ease-out 0.1s forwards;">
-                                            ${project6.details}
-                                        </p>
-                                        
-                                        <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.15s forwards;">
-                                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
-                                            <div class="flex flex-wrap">
-                                                ${technologiesHTML}
-                                            </div>
-                                        </div>
-
-                                        <div class="mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.2s forwards;">
-                                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
-                                            <div class="space-y-6">
-                                                ${imagesHTML}
-                                            </div>
-                                        </div>
-                                    `;
-                                    // Show modal with animation
-                                    modal6.classList.remove('hidden', 'closing');
-                                    modal6.classList.add('flex');
-                                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                            }
-
-                            // Fungsi untuk menutup modal dengan animasi
-                            function closeProjectModal6() {
-                                const modal6 = document.getElementById('projectModal6');
-                                
-                                // Add closing animation
-                                modal6.classList.add('closing');
-                                
-                                // Wait for animation to complete before hiding
-                                setTimeout(() => {
-                                    modal6.classList.add('hidden');
-                                    modal6.classList.remove('flex', 'closing');
-                                    document.body.style.overflow = 'auto'; // Restore scrolling
-                                }, 300); // Match with animation duration
-                            }
-
-                            // Fungsi untuk fullscreen image dengan animasi
-                            function openImageFullscreen(src) {
-                                const fullscreenDiv = document.createElement('div');
-                                fullscreenDiv.className = 'fullscreen-overlay fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-[60] p-4 cursor-pointer';
-                                
-                                fullscreenDiv.innerHTML = `
-                                    <button class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 hover:rotate-90 transition-all duration-300 bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">&times;</button>
-                                    <img src="${src}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" alt="Fullscreen Image">
-                                    <p class="absolute bottom-4 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded-full">Click anywhere to close</p>
-                                `;
-                                
-                                // Close on click anywhere
-                                fullscreenDiv.onclick = function(e) {
-                                    fullscreenDiv.style.animation = 'fadeOut 0.3s ease-out';
-                                    setTimeout(() => {
-                                        document.body.removeChild(fullscreenDiv);
-                                    }, 300);
-                                };
-                                
-                                document.body.appendChild(fullscreenDiv);
-                            }
-
-                            // Close modal when clicking outside
-                            document.getElementById('projectModal6').addEventListener('click', function(e) {
-                                if (e.target === this) {
-                                    closeProjectModal6();
-                                }
-                            });
-
-                            // Close modal with ESC key
-                            document.addEventListener6('keydown', function(e) {
-                                if (e.key === 'Escape') {
-                                    const modal6 = document.getElementById('projectModal6');
-                                    if (!modal6.classList.contains('hidden')) {
-                                        closeProjectModal6();
-                                    }
-                                }
-                            })
-                        </script>
                     </div>
                 </div>
             </div>
+
+            <div id="universalProjectModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
+                <div class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
+                    <button onclick="closeProjectModal()" class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
+                        &times;
+                    </button>
+                    <div id="universalModalContent" class="p-6 sm:p-8"></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Certifications & Training</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
                     <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Certified Tester Foundation Level (CTFL)</h4>
+                    <p class="text-gray-600">ISTQB® (On Going Learning) - 2026</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
+                    <div class="text-primary text-4xl mb-3">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
                     <h4 class="font-bold text-lg mb-2">Assistant Web Developer</h4>
                     <p class="text-gray-600">KOMDIGI - Digital Talent Indonesia - 2026</p>
                 </div>
 
+                
+                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element flex flex-col items-center justify-between">
+                    <div>
+                        <div class="text-primary text-4xl mb-3">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">API Testing</h4>
+                        <p class="text-gray-600 mb-4">Postman - 2025</p>
+                    </div>
+                    <!-- <a href="https://github.com/JuanDanielFP/API-Testing" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-4 py-2 text-sm rounded-full shadow-md hover:bg-blue-800 transition">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a> -->
+                </div>
+
                 <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
                     <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-tools"></i>
                     </div>
                     <h4 class="font-bold text-lg mb-2">Technical Support Fundamental (Google)</h4>
                     <p class="text-gray-600">Coursera and Google - 2024</p>
@@ -1599,7 +529,7 @@
 
                 <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
                     <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-check-double"></i>
                     </div>
                     <h4 class="font-bold text-lg mb-2">Quality Assurance</h4>
                     <p class="text-gray-600">Sanber Code - 2024</p>
@@ -1607,7 +537,7 @@
                 
                 <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
                     <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
                     <h4 class="font-bold text-lg mb-2">UOB Risk Culture</h4>
                     <p class="text-gray-600">Bank UOB Indonesia - 2024</p>
@@ -1623,7 +553,7 @@
                 
                 <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
                     <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-file-excel"></i>
                     </div>
                     <h4 class="font-bold text-lg mb-2">Basic Excel Training</h4>
                     <p class="text-gray-600">Seratus Ilmu - 2023</p>
@@ -1633,7 +563,7 @@
                     <div class="text-primary text-4xl mb-3">
                         <i class="fas fa-language"></i>
                     </div>
-                    <h4 class="font-bold text-lg mb-2">TOEFL Test</h4>
+                    <h4 class="font-bold text-lg mb-2">TOEFL</h4>
                     <p class="text-gray-600">Score: 500 - 2023</p>
                 </div>
 
@@ -1641,7 +571,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-12 sm:py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6">Get In Touch</h2>
@@ -1649,33 +578,214 @@
                 I'm always open to discussing quality assurance opportunities, testing strategies, or collaboration ideas.
             </p>
             
-            <!-- Contact Buttons - Responsive Grid -->
             <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-6 sm:mt-8 px-4">
-                <!-- WhatsApp -->
-                <a href="https://wa.me/6282134618257"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-green-600 transition w-full sm:w-auto min-w-[160px]">
+                <a href="https://wa.me/6282134618257" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-green-600 transition w-full sm:w-auto min-w-[160px]">
                     <i class="fab fa-whatsapp text-xl"></i>
                     <span class="font-medium">WhatsApp</span>
                 </a>
-
-                <!-- Email -->
-                <a href="mailto:juand21695@gmail.com"
-                    class="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition w-full sm:w-auto min-w-[160px]">
+                <a href="mailto:juand21695@gmail.com" class="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition w-full sm:w-auto min-w-[160px]">
                     <i class="fas fa-envelope text-xl"></i>
                     <span class="font-medium">Email</span>
                 </a>
-
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/juandaniel99/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition w-full sm:w-auto min-w-[160px]">
+                <a href="https://www.linkedin.com/in/juandaniel99/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition w-full sm:w-auto min-w-[160px]">
                     <i class="fab fa-linkedin-in text-xl"></i>
                     <span class="font-medium">LinkedIn</span>
+                </a>
+                <a href="https://github.com/JuanDanielFP" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition w-full sm:w-auto min-w-[160px]">
+                    <i class="fab fa-github text-xl"></i> GitHub
                 </a>
             </div>
         </div>
     </section>
-                
+
+    <script>
+        // Progress Bar Initialization
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".skill-bar").forEach(bar => {
+                const value = bar.dataset.width;
+                bar.style.width = value + "%";
+            });
+        });
+
+        // ==================================================
+        // DRY JAVASCRIPT UNTUK MODAL PROJECT
+        // ==================================================
+        
+        // 1. Data Sentral Semua Proyek
+        const allProjectsData = {
+            project1: {
+                title: "Qlola Platform",
+                details: "Validated UI/UX, Customer Data Security, Payment Processing, Transaction Limits, Midnight Batch Processing, and Negative Scenarios. Verified complete website redesign from Figma specifications ensuring functional integrity.",
+                technologies: ["Manual Testing", "Postman", "MySQL", "Jira"],
+                images: [
+                    { src: "images/BRI/Dashboard-Qlola-1.jpeg", caption: "Dashboard Overview" },
+                    { src: "images/BRI/Dashboard-Qlola-2.jpeg", caption: "Payment Processing Interface" },
+                    { src: "images/BRI/Test-Case-1.jpg", caption: "Test Case" },
+                    { src: "images/BRI/Bug-List-1.jpg", caption: "Bug List" },
+                    { src: "images/BRI/Jira-Issue-1.jpg", caption: "Report Bug" },
+                    { src: "images/BRI/Confluence-1.jpg", caption: "Evidence" },
+                    { src: "images/BRI/Figma-1.jpg", caption: "Figma" }
+                ]
+            },
+            project2: {
+                title: "U-Infinity Web",
+                details: "Validated tax payment and BIFAST features using NIK/NPWP with real-time transaction history. Modern E2E testing framework for web applications with comprehensive test coverage and reporting.",
+                technologies: ["Manual Testing", "MySQL", "AS400"],
+                images: [
+                    { src: "images/UOB/Dashboard-1.png", caption: "Dashboard Overview" },
+                    { src: "images/UOB/Dashboard-3.png", caption: "Payment Processing Interface" },
+                    { src: "images/UOB/Status-Trx-PSIAP-1.png", caption: "History Transaction" },
+                    { src: "images/UOB/Log-AS400-1.png", caption: "Dashboard Check Log" },
+                    { src: "images/UOB/Log-AS400-2.png", caption: "Menu Log" }
+                ]
+            },
+            project3: {
+                title: "U-4Trade Core Banking",
+                details: "Developed test scenarios for payment gateway and enhanced test coverage. Tested payment transactions via FTP/FTPS, analyzing processing capacity and performance.",
+                technologies: ["Manual Testing", "MySQL", "AS400"],
+                images: [
+                    { src: "images/UOB/Dashboard-2.png", caption: "Dashboard Overview" },
+                    { src: "images/UOB/BI-FAST-3.png", caption: "Payment Processing Interface" },
+                    { src: "images/UOB/Status-Trx-PSIAP-1.png", caption: "History Transaction" },
+                    { src: "images/UOB/Log-AS400-1.png", caption: "Dashboard Check Log" },
+                    { src: "images/UOB/Log-AS400-2.png", caption: "Menu Log" }
+                ]
+            },
+            project4: {
+                title: "Credit Card/ATM Simulator",
+                details: "Test cases for electronic money system including reader validation and transaction flow testing.",
+                technologies: ["Manual Testing", "ATM Simulator", "Excel"],
+                images: [
+                    { src: "images/BNI/ATM-1.jpg", caption: "Dashboard ATM Simulator" },
+                    { src: "images/BNI/ATM-2.jpg", caption: "Process Topup E-Money" },
+                    { src: "images/BNI/ATM-4.jpg", caption: "Card Testing E-Money" },
+                    { src: "images/BNI/ATM-Struk-1.jpg", caption: "Transaction ATM Struck Success" },
+                    { src: "images/BNI/Defect-1.jpg", caption: "Defect List" }
+                ]
+            },
+            project5: {
+                title: "Tapcash/E-Money",
+                details: "Validated NFC e-money chip payment and Tapcash GO integration.",
+                technologies: ["Manual Testing", "E-Money", "EDC"],
+                images: [
+                    { src: "images/BNI/EDC-2.jpg", caption: "Tap Card E-Money" },
+                    { src: "images/BNI/EDC-3.jpg", caption: "Balance Card" },
+                    { src: "images/BNI/EDC-4.jpg", caption: "Process Purchase" },
+                    { src: "images/BNI/EDC-1.jpg", caption: "Purchase Success" }
+                ]
+            },
+            project6: {
+                title: "Mobile Banking BNI",
+                details: "Ensured real-time feature updates and data synchronization for cross-platform testing (Android, IOS, Huawei).",
+                technologies: ["Manual Testing", "Excel", "E-Money", "Mobile Banking"],
+                images: [
+                    { src: "images/BNI/Mbanking-2.jpg", caption: "Dashboard Mobile Banking" },
+                    { src: "images/BNI/Mbanking-1.jpg", caption: "Last History E-Money" },
+                    { src: "images/BNI/Test-Case-1.jpg", caption: "Test Case Mbanking" },
+                    { src: "images/BNI/Test-Case-1-Mbanking.jpg", caption: "Test Case Mbanking" },
+                    { src: "images/BNI/Defect-1-Mbanking.jpg", caption: "Defect Mbanking" },
+                    { src: "images/BNI/Defect-2.jpg", caption: "Defect Mbanking" }
+                ]
+            }
+        };
+
+        // 2. Fungsi Buka Modal Dinamis
+        function openProjectModal(projectId) {
+            const modal = document.getElementById('universalProjectModal');
+            const modalContent = document.getElementById('universalModalContent');
+            const project = allProjectsData[projectId];
+
+            if (!project) return;
+
+            // Render Images
+            let imagesHTML = '';
+            project.images.forEach((image, index) => {
+                imagesHTML += `
+                    <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out ${index * 0.1}s forwards;">
+                        <img src="${image.src}" alt="${image.caption}" 
+                            class="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300"
+                            onclick="openImageFullscreen('${image.src}')"
+                            onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'">
+                        <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
+                    </div>
+                `;
+            });
+
+            // Render Tech Tags
+            let technologiesHTML = '';
+            project.technologies.forEach((tech, index) => {
+                technologiesHTML += `
+                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block opacity-0" style="animation: fadeInUp 0.4s ease-out ${index * 0.05 + 0.2}s forwards;">${tech}</span>
+                `;
+            });
+
+            // Insert HTML
+            modalContent.innerHTML = `
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out forwards;">
+                    ${project.title}
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify opacity-0" style="animation: fadeInUp 0.5s ease-out 0.1s forwards;">
+                    ${project.details}
+                </p>
+                <div class="mb-6 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.15s forwards;">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
+                    <div class="flex flex-wrap">${technologiesHTML}</div>
+                </div>
+                <div class="mb-4 opacity-0" style="animation: fadeInUp 0.5s ease-out 0.2s forwards;">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
+                    <div class="space-y-6">${imagesHTML}</div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden', 'closing');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        // 3. Fungsi Tutup Modal
+        function closeProjectModal() {
+            const modal = document.getElementById('universalProjectModal');
+            modal.classList.add('closing');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex', 'closing');
+                document.body.style.overflow = 'auto'; 
+            }, 300); 
+        }
+
+        // 4. Fungsi Fullscreen Image
+        function openImageFullscreen(src) {
+            const fullscreenDiv = document.createElement('div');
+            fullscreenDiv.className = 'fullscreen-overlay fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-[60] p-4 cursor-pointer';
+            fullscreenDiv.innerHTML = `
+                <button class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 hover:rotate-90 transition-all duration-300 bg-gray-800 bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">&times;</button>
+                <img src="${src}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" alt="Fullscreen Image">
+                <p class="absolute bottom-4 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded-full">Click anywhere to close</p>
+            `;
+            
+            fullscreenDiv.onclick = function() {
+                fullscreenDiv.style.animation = 'fadeOut 0.3s ease-out';
+                setTimeout(() => { document.body.removeChild(fullscreenDiv); }, 300);
+            };
+            document.body.appendChild(fullscreenDiv);
+        }
+
+        // 5. Modal Event Listeners
+        document.getElementById('universalProjectModal').addEventListener('click', function(e) {
+            if (e.target === this) closeProjectModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('universalProjectModal');
+                if (!modal.classList.contains('hidden')) closeProjectModal();
+            }
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
