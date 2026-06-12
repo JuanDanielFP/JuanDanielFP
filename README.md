@@ -18,28 +18,71 @@
 
 ---
 
-### 🛠️ Tech Stack & Tools
+### 🛠️ Language & Tools
 
-<p align="left">
-  <!-- Programming Languages -->
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
-<a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-
-<!-- Web Automation Testing -->
-<a href="https://playwright.dev/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/playwright/playwright-original.svg" alt="playwright" width="40" height="40"/> </a>
-<a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg" alt="selenium" width="40" height="40"/> </a>
-
-<!-- API Testing -->
-<a href="https://www.postman.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a>
-
-<!-- Mobile Automation Testing -->
-<a href="https://appium.io/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/appium.svg" alt="appium" width="40" height="40"/> </a>
-
-<!-- Performance Testing -->
-<a href="https://jmeter.apache.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/apache_jmeter/apache_jmeter-icon.svg" alt="jmeter" width="40" height="40"/> </a>
-<a href="https://k6.io/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/K6-logo.svg" alt="k6" width="40" height="40"/> </a>
-</p>
-
+<table>
+  <tr>
+    <td align="center" width="110">
+      <a href="https://www.python.org" target="_blank" rel="noreferrer">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="40" height="40"/><br>
+        Python
+      </a>
+    </td>
+    <td align="center" width="110">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40"/><br>
+        JavaScript
+      </a>
+    </td>
+    <td align="center" width="110">
+      <a href="https://playwright.dev/" target="_blank" rel="noreferrer">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/playwright/playwright-original.svg" alt="Playwright" width="40" height="40"/><br>
+        Playwright
+      </a>
+    </td>
+    <td align="center" width="110">
+      <a href="https://www.cypress.io" target="_blank" rel="noreferrer">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cypressio/cypressio-original.svg" alt="Cypress" width="40" height="40"/><br>
+        Cypress
+      </a>
+    </td>
+    <td align="center" width="110">
+      <a href="https://www.selenium.dev" target="_blank" rel="noreferrer">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg" alt="Selenium" width="40" height="40"/><br>
+        Selenium
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="110">
+      <a href="https://www.postman.com/" target="_blank" rel="noreferrer">
+        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="40" height="40"/><br>
+        Postman
+      </a>
+    </td>
+    <td align="center" width="110">
+      <a href="https://appium.io/" target="_blank" rel="noreferrer">
+        <img src="https://cdn.worldvectorlogo.com/logos/appium.svg" alt="Appium" width="40" height="40"/><br>
+        Appium
+      </a>
+    </td>
+    <td align="center" width="110">
+      <a href="https://jmeter.apache.org/" target="_blank" rel="noreferrer">
+        <img src="https://www.vectorlogo.zone/logos/apache_jmeter/apache_jmeter-icon.svg" alt="JMeter" width="40" height="40"/><br>
+        JMeter
+      </a>
+    </td>
+    <td align="center" width="110">
+      <a href="https://k6.io/" target="_blank" rel="noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/K6-logo.svg" alt="k6" width="40" height="40"/><br>
+        k6
+      </a>
+    </td>
+    <td align="center" width="110">
+      <!-- Kolom kosong agar grid tabel tetap simetris -->
+    </td>
+  </tr>
+</table>
 ---
 ### 📊 GitHub Stats
 
