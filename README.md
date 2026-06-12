@@ -68,13 +68,13 @@
     </td>
     <td align="center" width="110">
       <a href="https://jmeter.apache.org/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/apache_jmeter/apache_jmeter-icon.svg" alt="JMeter" width="40" height="40"/><br>
+        <img src="https://seeklogo.com/vector-logo/388141/jmeter" alt="JMeter" width="40" height="40"/><br>
         JMeter
       </a>
     </td>
     <td align="center" width="110">
       <a href="https://k6.io/" target="_blank" rel="noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/K6-logo.svg" alt="k6" width="40" height="40"/><br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/K6-logo.svg" alt="k6" width="40" height="40"/><br>
         k6
       </a>
     </td>
@@ -84,11 +84,10 @@
   </tr>
 </table>
 ---
+
+
 ### 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JuanDanielFP&show_icons=true&theme=tokyonight&hide_border=true" alt="JuanDanielFP's GitHub stats" />
-</p>
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=JuanDanielFP&theme=tokyonight&hide_border=true" alt="JuanDanielFP's GitHub Streak" />
 </p>
