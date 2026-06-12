@@ -68,7 +68,7 @@
     </td>
     <td align="center" width="110">
       <a href="https://jmeter.apache.org/" target="_blank" rel="noreferrer">
-        <img src="https://seeklogo.com/vector-logo/388141/jmeter" alt="JMeter" width="40" height="40"/><br>
+        <img src="https://jmeter.apache.org/images/jmeter.png" alt="JMeter" width="40" height="40"/><br>
         JMeter
       </a>
     </td>
@@ -83,8 +83,8 @@
     </td>
   </tr>
 </table>
----
 
+---
 
 ### 📊 GitHub Stats
 
