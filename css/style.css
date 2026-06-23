@@ -1,11 +1,10 @@
-/* Custom Animations and Additional Styles */
+﻿/* Custom Portfolio Styles */
 
-/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Custom Animations */
+/* Fade, slide, and zoom animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -17,461 +16,19 @@ html {
     }
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Fade In Elements */
-.fade-in-element {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in-element.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Skill Bar Animation */
-.skill-bar {
-    width: 0;
-    transition: width 1s ease-in-out;
-
-}
-
-.skill-bar.animate {
-    width: var(--target-width);
-}
-
-/* Active Navigation Link */
-.nav-link.active {
-    color: #2563eb;
-    font-weight: 600;
-}
-
-/* Hover Effects */
-.hover-scale:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #2563eb;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #1e40af;
-}
-
-/* Loading Animation */
-.loading {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(37, 99, 235, 0.3);
-    border-radius: 50%;
-    border-top-color: #2563eb;
-    animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Gradient Text */
-.gradient-text {
-    background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* Card Hover Effect */
-.card-hover {
-    transition: all 0.3s ease;
-}
-
-.card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Button Pulse Effect */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-.btn-pulse:hover {
-    animation: pulse 0.5s ease-in-out;
-}
-
-/* Text Selection */
-::selection {
-    background-color: #2563eb;
-    color: white;
-}
-
-::-moz-selection {
-    background-color: #2563eb;
-    color: white;
-}
-
-/* Focus Styles */
-a:focus,
-button:focus {
-    outline: 2px solid #2563eb;
-    outline-offset: 2px;
-}
-
-/* Image Hover Effect */
-.img-hover {
-    overflow: hidden;
-}
-
-.img-hover img {
-    transition: transform 0.3s ease;
-}
-
-.img-hover:hover img {
-    transform: scale(1.1);
-}
-
-/* Timeline Line (Optional) */
-.timeline-line {
-    position: relative;
-}
-
-.timeline-line::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #2563eb, #8b5cf6);
-}
-
-/* Mobile Menu Transition */
-#mobile-menu {
-    transition: max-height 0.3s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-}
-
-#mobile-menu.active {
-    max-height: 500px;
-}
-
-/* Responsive Typography */
-@media (max-width: 640px) {
-    html {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 641px) and (max-width: 1024px) {
-    html {
-        font-size: 15px;
-    }
-}
-
-@media (min-width: 1025px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-/* Print Styles */
-@media print {
-    nav,
-    footer,
-    .no-print {
-        display: none;
-    }
-    
-    body {
-        font-size: 12pt;
-    }
-    
-    a {
-        text-decoration: none;
-        color: black;
-    }
-}
-
-/* Dark Mode Support (Optional) */
-@media (prefers-color-scheme: dark) {
-    /* Uncomment to enable dark mode
-    body {
-        background-color: #1a202c;
-        color: #e2e8f0;
-    }
-    */
-}
-
-/* Accessibility */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-/* Utility Classes */
-.text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.box-shadow-lg {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Loading State */
-.loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-/* Tooltip */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltip-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: #1f2937;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Smooth transition untuk semua elemen */
-* {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-/* Dark mode untuk body */
-body {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.dark body {
-    background-color: #1a202c;
-    color: #e2e8f0;
-}
-
-/* Dark mode untuk navbar */
-nav {
-    background-color: #ffffff;
-}
-
-.dark nav {
-    background-color: #2d3748;
-}
-
-/* Dark mode untuk sections */
-section {
-    background-color: #ffffff;
-}
-
-.dark section {
-    background-color: #1a202c;
-}
-
-/* Dark mode untuk section dengan background gray */
-.bg-gray-50 {
-    background-color: #f9fafb;
-}
-
-.dark .bg-gray-50 {
-    background-color: #2d3748;
-}
-
-/* Dark mode untuk headings */
-h1, h2, h3, h4, h5, h6 {
-    color: #1a202c;
-}
-
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
-    color: #f7fafc;
-}
-
-/* Dark mode untuk paragraf */
-p {
-    color: #4a5568;
-}
-
-.dark p {
-    color: #cbd5e0;
-}
-
-/* Dark mode untuk text-gray-600 */
-.text-gray-600 {
-    color: #718096;
-}
-
-.dark .text-gray-600 {
-    color: #a0aec0;
-}
-
-/* Dark mode untuk cards */
-.card,
-.bg-white {
-    background-color: #ffffff;
-}
-
-.dark .card,
-.dark .bg-white {
-    background-color: #2d3748;
-}
-
-/* Dark mode untuk borders */
-.border {
-    border-color: #e2e8f0;
-}
-
-.dark .border {
-    border-color: #4a5568;
-}
-
-/* Dark mode untuk links */
-a {
-    color: #3182ce;
-}
-
-.dark a {
-    color: #63b3ed;
-}
-
-/* Hover effect untuk toggle button */
-#dark-mode-toggle:hover {
-    transform: scale(1.1);
-}
-
-/* Modal Animation */
-#projectModal {
-    animation: fadeIn 0.3s ease-out;
-}
-
-#projectModal.closing {
-    animation: fadeOut 0.3s ease-out;
-}
-
-#projectModal > div {
-    animation: slideUp 0.4s ease-out;
-    transform-origin: center;
-}
-
-#projectModal.closing > div {
-    animation: slideDown 0.3s ease-out;
-}
-
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        backdrop-filter: blur(0px);
-    }
-    to {
-        opacity: 1;
-        backdrop-filter: blur(4px);
-    }
-}
-
 @keyframes fadeOut {
     from {
         opacity: 1;
-        backdrop-filter: blur(4px);
     }
     to {
         opacity: 0;
-        backdrop-filter: blur(0px);
     }
 }
 
 @keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(50px) scale(0.95);
+        transform: translateY(40px) scale(0.95);
     }
     to {
         opacity: 1;
@@ -490,63 +47,6 @@ a {
     }
 }
 
-/* Image hover effect */
-#modalContent img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#modalContent img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Smooth scrollbar */
-#projectModal > div {
-    scrollbar-width: thin;
-    scrollbar-color: #cbd5e0 #f7fafc;
-}
-
-#projectModal > div::-webkit-scrollbar {
-    width: 8px;
-}
-
-#projectModal > div::-webkit-scrollbar-track {
-    background: #f7fafc;
-    border-radius: 10px;
-}
-
-#projectModal > div::-webkit-scrollbar-thumb {
-    background: #cbd5e0;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-}
-
-#projectModal > div::-webkit-scrollbar-thumb:hover {
-    background: #a0aec0;
-}
-
-/* Dark mode scrollbar */
-.dark #projectModal > div::-webkit-scrollbar-track {
-    background: #2d3748;
-}
-
-.dark #projectModal > div::-webkit-scrollbar-thumb {
-    background: #4a5568;
-}
-
-.dark #projectModal > div::-webkit-scrollbar-thumb:hover {
-    background: #718096;
-}
-
-/* Fullscreen image animation */
-.fullscreen-overlay {
-    animation: fadeIn 0.3s ease-out;
-}
-
-.fullscreen-overlay img {
-    animation: zoomIn 0.4s ease-out;
-}
-
 @keyframes zoomIn {
     from {
         opacity: 0;
@@ -558,12 +58,23 @@ a {
     }
 }
 
-/* Button hover effects */
-button {
-    transition: all 0.3s ease;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Close button pulse effect */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -573,98 +84,187 @@ button {
     }
 }
 
-#projectModal .close-btn:hover {
-    animation: pulse 0.6s ease-in-out;
+/* Fade-in helper */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Modal Animation - Improved */
-#projectModal {
-    transition: opacity 0.3s ease-out, backdrop-filter 0.3s ease-out;
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-#projectModal.show {
+/* Skill bars */
+.skill-bar {
+    width: 0;
+    transition: width 0.8s ease-out;
+}
+
+/* Active nav links */
+.nav-link.active,
+.mobile-nav-link.active {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Modal wrapper */
+#universalProjectModal {
     animation: fadeIn 0.3s ease-out forwards;
 }
 
-#projectModal.closing {
+#universalProjectModal.closing {
     animation: fadeOut 0.3s ease-out forwards;
 }
 
-#projectModal > div {
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease-out;
-}
-
-#projectModal.show > div {
-    animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-#projectModal.closing > div {
-    animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-/* Keyframe Animations - Enhanced */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        backdrop-filter: blur(0px);
-    }
-    to {
-        opacity: 1;
-        backdrop-filter: blur(4px);
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        backdrop-filter: blur(4px);
-    }
-    to {
-        opacity: 0;
-        backdrop-filter: blur(0px);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(60px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(40px) scale(0.95);
-    }
-}
-
-/* Close Button - Enhanced Hover Effect */
-.close-btn {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+#universalProjectModal > div {
+    animation: slideUp 0.4s ease-out forwards;
     transform-origin: center;
 }
 
-.close-btn:hover {
-    transform: rotate(90deg) scale(1.1);
-    background-color: rgba(239, 68, 68, 0.1);
+#universalProjectModal.closing > div {
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+/* Optimized modal content fade-in */
+.modal-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #universalProjectModal,
+    #universalProjectModal > div,
+    .modal-fade-in {
+        animation: none;
+    }
+}
+
+#universalProjectModal .close-btn {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transform-origin: center;
+}
+
+#universalProjectModal .close-btn:hover {
+    transform: rotate(90deg) scale(1.05);
+    background-color: rgba(255, 255, 255, 0.9);
     color: #ef4444;
 }
 
-.close-btn:active {
+#universalProjectModal .close-btn:active {
     transform: rotate(90deg) scale(0.95);
 }
 
-/* Dark mode close button */
-.dark .close-btn:hover {
-    background-color: rgba(239, 68, 68, 0.2);
-    color: #f87171;
+/* Fullscreen image overlay */
+.fullscreen-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 60;
+    cursor: pointer;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.fullscreen-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+    animation: zoomIn 0.4s ease-out;
+}
+
+.fullscreen-overlay button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid rgba(37, 99, 235, 0.25);
+    border-radius: 50%;
+    border-top-color: #2563eb;
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Misc utilities */
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+button,
+a {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1e40af;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1025px) {
+    html {
+        font-size: 16px;
+    }
 }
