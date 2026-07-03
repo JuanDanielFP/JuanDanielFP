@@ -2,7 +2,7 @@
 <h3 align="center">QA Engineer | Software Test Automation Enthusiast</h3>
 
 <p align="center">
-  A passionate Quality Assurance professional with over 5 years of experience in manual testing, currently transitioning into the world of Software Test Automation. I love ensuring software quality, debugging code, and building automated test scripts.
+I am a QA Engineer professional with over 5 years of experience in both manual testing and Software Automation Testing. I enjoy ensuring software quality, debugging code, creating automated test scripts, and finding bugs.
 </p>
 
 ---
@@ -14,7 +14,6 @@
 - 🎓 I hold a degree from **Atma Jaya Yogyakarta University**.
 - 💼 I am actively preparing for professional software testing certifications, including **ISTQB**.
 - 🌐 Outside of tech, I am actively improving my foreign language skills in English.
-- ⚡ Fun fact: I have a keen eye for technical debugging, recently fixing logic errors and HTTP 401/403 status codes in my Python scripts!
 
 ---
 
@@ -38,12 +37,6 @@
       <a href="https://playwright.dev/" target="_blank" rel="noreferrer">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/playwright/playwright-original.svg" alt="Playwright" width="40" height="40"/><br>
         Playwright
-      </a>
-    </td>
-    <td align="center" width="110">
-      <a href="https://www.cypress.io" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cypressio/cypressio-original.svg" alt="Cypress" width="40" height="40"/><br>
-        Cypress
       </a>
     </td>
     <td align="center" width="110">
@@ -78,9 +71,7 @@
         k6
       </a>
     </td>
-    <td align="center" width="110">
-      <!-- Kolom kosong agar grid tabel tetap simetris -->
-    </td>
+    
   </tr>
 </table>
 
@@ -97,10 +88,10 @@
 ### 📫 Connect with me
 
 <p align="left">
-  <a href="https://linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank">
+  <a href="https://linkedin.com/in/juandaniel99/)" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="mailto:YOUR-EMAIL@EXAMPLE.COM">
+  <a href="mailto:juand21695@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
