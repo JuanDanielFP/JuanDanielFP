@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Juan Daniel Febrison Pattirane</h1>
-<h3 align="center">QA Engineer | Software Test Automation Enthusiast</h3>
+<h3 align="center">QA Engineer </h3>
 
 <p align="center">
 I am a QA Engineer professional with over 5 years of experience in both manual testing and Software Automation Testing. I enjoy ensuring software quality, debugging code, creating automated test scripts, and finding bugs.
