@@ -1,8 +1,8 @@
 /* ============================================================
    JUAN DANIEL FP — Portfolio Stylesheet
-   Supports: Dark Mode (default) & Light Mode
-   Theme: Navy + Electric Purple/Blue
+   Theme: Dark Mode — Navy + Electric Purple/Blue
    ============================================================ */
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
@@ -51,11 +51,12 @@ html {
 
 body {
     font-family: 'Inter', 'Space Grotesk', system-ui, sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
     line-height: 1.7;
     overflow-x: hidden;
 }
+
 
 /* ── Animated gradient background ── */
 body::before {
