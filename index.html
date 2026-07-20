@@ -1,708 +1,1042 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Juan Daniel - QA Engineer with 5+ years experience in banking applications">
-    <meta name="keywords" content="QA Engineer, Software Testing, Manual Testing, Automation, API Testing">
-    <meta name="author" content="Juan Daniel">
-    
-    <title>Juan Daniel Febrison Pattirane - QA Engineer Portfolio</title>
-    
+    <meta name="description"
+        content="Juan Daniel Febrison Pattirane — QA Engineer with 5+ years of experience in banking & financial applications. Expert in Manual, Automation, and API Testing.">
+    <meta name="keywords"
+        content="QA Engineer, Software Testing, Manual Testing, Automation, API Testing, Playwright, Selenium, Postman">
+    <meta name="author" content="Juan Daniel Febrison Pattirane">
+    <meta property="og:title" content="Juan Daniel — QA Engineer Portfolio">
+    <meta property="og:description"
+        content="5+ years of experience in ensuring software quality across banking and financial applications.">
+    <meta property="og:type" content="website">
+
+    <title>Juan Daniel Febrison Pattirane — QA Engineer Portfolio</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
-                        secondary: '#1e40af',
-                        accent: '#8b5cf6',
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-in-out',
-                        'slide-up': 'slideUp 0.6s ease-in-out',
-                    },
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        accent: '#06b6d4',
+                    }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans antialiased text-gray-800">
 
-    <nav class="fixed w-full top-0 z-50 bg-white shadow-md">
+<body class="antialiased">
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading"></div>
+        <span class="loading-text">Loading</span>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════════ -->
+    <nav class="fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <a href="#home" class="text-2xl font-bold text-primary">Juan Daniel</a>
-                </div>
-                
+                <!-- Brand -->
+                <a href="#home" class="nav-brand">JD<span style="opacity:.5">·</span>FP</a>
+
+                <!-- Desktop Nav -->
                 <div class="hidden md:block">
-                    <ul class="flex space-x-8">
-                        <li><a href="#home" class="nav-link hover:text-primary transition">Home</a></li>
-                        <li><a href="#about" class="nav-link hover:text-primary transition">About</a></li>
-                        <li><a href="#skills" class="nav-link hover:text-primary transition">Skills</a></li>
-                        <li><a href="#experience" class="nav-link hover:text-primary transition">Experience</a></li>
-                        <li><a href="#projects" class="nav-link hover:text-primary transition">Projects</a></li>
-                        <li><a href="#certifications" class="nav-link hover:text-primary transition">Certifications</a></li>
-                        <li><a href="#contact" class="nav-link hover:text-primary transition">Contact</a></li>
+                    <ul class="flex items-center space-x-8">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-gray-400 hover:text-white focus:outline-none p-2 rounded-lg"
+                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
             </div>
-        </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <ul class="px-2 pt-2 pb-3 space-y-1">
-                <li><a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100">Home</a></li>
-                <li><a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100">About</a></li>
-                <li><a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100">Skills</a></li>
-                <li><a href="#experience" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100">Experience</a></li>
-                <li><a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100">Projects</a></li>
-                <li><a href="#certifications" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100">Certifications</a></li>
-                <li><a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-gray-100">Contact</a></li>
+
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t" style="border-color: rgba(139,92,246,0.18);">
+            <ul class="px-4 py-4 space-y-1">
+                <li><a href="#home" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm">About</a></li>
+                <li><a href="#skills" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm">Skills</a></li>
+                <li><a href="#experience" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm">Experience</a>
+                </li>
+                <li><a href="#projects" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm">Projects</a></li>
+                <li><a href="#certifications"
+                        class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm">Certifications</a></li>
+                <li><a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home" class="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center animate-fade-in">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-                    Juan Daniel
-                </h1>
-                <h2 class="text-xl md:text-2xl lg:text-3xl text-primary font-semibold mb-6">
-                    QA Engineer | Manual & Automation Testing Specialist
+    <!-- ═══════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="home" class="pt-20 pb-16 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+            <div class="text-center fade-in-element">
+
+                <!-- Availability chip -->
+                <div class="flex justify-center mb-7">
+                    <span class="glow-chip">
+                        <span
+                            style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;display:inline-block;animation: pulse-glow 2s ease-in-out infinite;"></span>
+                        Open to Opportunities
+                    </span>
+                </div>
+
+                <!-- Name -->
+                <h1 class="hero-name mb-4">Juan Daniel<br>Febrison Pattirane</h1>
+
+                <!-- Role with typing effect -->
+                <h2 class="hero-role mb-6">
+                    <span id="typed-role">QA Engineer</span><span class="typing-cursor"></span>
                 </h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                    5+ years of experience in ensuring software quality across banking and financial applications. 
-                    Specialized in Manual & Automation Testing and API Testing.
+
+                <!-- Description -->
+                <p class="hero-desc mb-10 mx-auto">
+                    5+ years of experience ensuring software quality across <strong style="color:#f1f5f9;">banking &
+                        financial applications</strong>.
+                    Specialized in Manual Testing, Automation Frameworks, and API Validation.
                 </p>
-                
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#contact" class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg font-semibold transition transform hover:scale-105">
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-16">
+                    <a href="#contact" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
                         Get In Touch
                     </a>
-                    <a href="#projects" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition">
-                        View Projects
+                    <a href="#projects" class="btn-secondary">
+                        <i class="fas fa-folder-open"></i>
+                        View My Work
+                    </a>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto fade-in-element">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Exp.</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Banks Served</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Bugs Found</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">Regression Reduced</div>
+                    </div>
+                </div>
+
+                <!-- Scroll indicator -->
+                <div class="mt-16 flex justify-center" style="animation: float 2.5s ease-in-out infinite;">
+                    <a href="#about"
+                        style="color: rgba(139,92,246,0.6); font-size: 1.5rem; transition: color 0.3s ease;"
+                        onmouseover="this.style.color='rgba(139,92,246,1)'"
+                        onmouseout="this.style.color='rgba(139,92,246,0.6)'">
+                        <i class="fas fa-chevron-down"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-16 bg-white">
+    <!-- ═══════════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="about" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About</h2>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="fade-in-element">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Professional QA Engineer</h3>
-                    <p class="text-gray-600 mb-4 text-justify">
-                        I'm a dedicated QA Engineer with over 5+ years of experience in the banking and financial sector. 
-                        My expertise lies in comprehensive Manual Testing, API Validation, and Building Automated Test Frameworks.
+            <h2 class="section-title">About Me</h2>
+
+            <div class="grid md:grid-cols-2 gap-14 items-start">
+                <div class="about-text fade-in-element">
+                    <h3>Professional QA Engineer</h3>
+                    <p class="mb-5">
+                        I'm a dedicated QA Engineer with over <strong style="color:#f1f5f9;">5+ years of
+                            experience</strong> in the banking and financial sector.
+                        My expertise lies in comprehensive Manual Testing, API Validation, and Building Automated Test
+                        Frameworks.
                     </p>
-                    <p class="text-gray-600 mb-4 text-justify">
-                        I've successfully reduced regression testing time by up to 80% and identified critical bugs before production, 
-                        ensuring seamless user experiences for millions of banking customers. I also actively engage in debugging automation scripts and handling HTTP status errors (401, 403) to ensure robust backend logic.
+                    <p class="mb-5">
+                        I've successfully <strong style="color:#f1f5f9;">reduced regression testing time by up to
+                            80%</strong> and identified critical bugs before production,
+                        ensuring seamless user experiences for millions of banking customers. I actively engage in
+                        debugging automation scripts
+                        and handling HTTP status errors to ensure robust backend logic.
                     </p>
-                    <p class="text-gray-600 text-justify">
-                        My approach combines meticulous attention to detail with a deep understanding of business requirements, 
+                    <p>
+                        My approach combines meticulous attention to detail with a deep understanding of business
+                        requirements,
                         making me an effective bridge between development teams and end users.
                     </p>
+
+                    <!-- Tags -->
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="project-tag">🏦 Banking Apps</span>
+                        <span class="project-tag">⚙️ Automation</span>
+                        <span class="project-tag">🧪 Manual Testing</span>
+                        <span class="project-tag">🔗 API Testing</span>
+                        <span class="project-tag">📱 Mobile Testing</span>
+                        <span class="project-tag">🚀 Agile / Scrum</span>
+                    </div>
+
+                    <!-- Education + TOEFL -->
+                    <div class="mt-8 p-5 rounded-xl fade-in-element"
+                        style="background: rgba(59,130,246,0.07); border: 1px solid rgba(59,130,246,0.18);">
+                        <div class="flex items-start gap-3 mb-3">
+                            <i class="fas fa-graduation-cap mt-1" style="color:#3b82f6;"></i>
+                            <div>
+                                <div style="color:#f1f5f9; font-weight:600; font-size:0.95rem;">Atma Jaya Yogyakarta
+                                    University</div>
+                                <div style="color:#64748b; font-size:0.82rem;">Bachelor's Degree</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-language mt-1" style="color:#8b5cf6;"></i>
+                            <div>
+                                <div style="color:#f1f5f9; font-weight:600; font-size:0.95rem;">TOEFL — Score 525</div>
+                                <div style="color:#64748b; font-size:0.82rem;">English Proficiency</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="bg-gray-50 p-6 rounded-lg text-center fade-in-element">
-                        <div class="text-4xl font-bold text-primary mb-2">5+</div>
-                        <div class="text-gray-600">Years Experience</div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 gap-5 fade-in-element">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Experience</div>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center fade-in-element">
-                        <div class="text-4xl font-bold text-primary mb-2">15+</div>
-                        <div class="text-gray-600">Critical Bugs Found</div>
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Critical Bugs Found</div>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center fade-in-element">
-                        <div class="text-4xl font-bold text-primary mb-2">80%</div>
-                        <div class="text-gray-600">Testing Time Reduced</div>
+                    <div class="stat-card">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">Testing Time Reduced</div>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center fade-in-element">
-                        <div class="text-4xl font-bold text-primary mb-2">6+</div>
-                        <div class="text-gray-600">Projects Delivered</div>
+                    <div class="stat-card">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Projects Delivered</div>
+                    </div>
+
+                    <!-- Tool logos row -->
+                    <div class="col-span-2 p-5 rounded-xl"
+                        style="background: var(--bg-card); border: 1px solid var(--border);">
+                        <div
+                            style="color: var(--text-muted); font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; text-align: center;">
+                            Tools & Technologies</div>
+                        <div class="grid grid-cols-4 gap-3 text-center">
+                            <div>
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                                    alt="Python" class="w-9 h-9 mx-auto mb-1 opacity-80 hover:opacity-100 transition"
+                                    style="filter: drop-shadow(0 0 6px rgba(59,130,246,0.4));">
+                                <span style="color: var(--text-muted); font-size: 0.7rem;">Python</span>
+                            </div>
+                            <div>
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript"
+                                    class="w-9 h-9 mx-auto mb-1 opacity-80 hover:opacity-100 transition"
+                                    style="filter: drop-shadow(0 0 6px rgba(234,179,8,0.4));">
+                                <span style="color: var(--text-muted); font-size: 0.7rem;">JavaScript</span>
+                            </div>
+                            <div>
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg"
+                                    alt="Selenium" class="w-9 h-9 mx-auto mb-1 opacity-80 hover:opacity-100 transition"
+                                    style="filter: drop-shadow(0 0 6px rgba(34,197,94,0.4));">
+                                <span style="color: var(--text-muted); font-size: 0.7rem;">Selenium</span>
+                            </div>
+                            <div>
+                                <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+                                    alt="Postman" class="w-9 h-9 mx-auto mb-1 opacity-80 hover:opacity-100 transition"
+                                    style="filter: drop-shadow(0 0 6px rgba(239,68,68,0.4));">
+                                <span style="color: var(--text-muted); font-size: 0.7rem;">Postman</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-16 bg-gray-50">
+    <!-- ═══════════════════════════════════════════
+         SKILLS SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="skills" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Skills</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
-                    <h3 class="text-xl font-bold text-primary mb-6">Functional Testing</h3>
+            <h2 class="section-title">Skills</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Functional Testing -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md fade-in-element">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            style="width:38px;height:38px;border-radius:10px;background:rgba(59,130,246,0.15);display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-check-circle" style="color:#3b82f6;font-size:1.1rem;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Functional Testing</h3>
+                    </div>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Regression Testing</span>
-                                <span class="text-gray-600 font-medium">Expert</span>
+                                <span class="font-semibold text-sm">Regression Testing</span>
+                                <span class="text-gray-600 text-xs font-medium">Expert</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="100"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">UAT</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="100" style="height:6px;"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Exploratory Testing</span>
-                                <span class="text-gray-600 font-medium">Expert</span>
+                                <span class="font-semibold text-sm">UAT</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Smoke Testing</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Sanity Testing</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
+                                <span class="font-semibold text-sm">Exploratory Testing</span>
+                                <span class="text-gray-600 text-xs font-medium">Expert</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="95" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">Smoke Testing</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">Sanity Testing</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
-                    <h3 class="text-xl font-bold text-primary mb-6">Non Functional Testing</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Load Testing</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="85"></div>
-                            </div>
+                <!-- Non-Functional Testing -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md fade-in-element">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            style="width:38px;height:38px;border-radius:10px;background:rgba(139,92,246,0.15);display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-tachometer-alt" style="color:#8b5cf6;font-size:1.1rem;"></i>
                         </div>
-                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Performance Testing</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="85"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Jmeter</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="85"></div>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-bold">Non-Functional Testing</h3>
                     </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
-                    <h3 class="text-xl font-bold text-primary mb-6">Manual Testing</h3>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Create Test Plan</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
+                                <span class="font-semibold text-sm">Load Testing</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Create Test & Scenarios</span>
-                                <span class="text-gray-600 font-medium">Expert</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="100"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="85" style="height:6px;"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Verification & Validation</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
+                                <span class="font-semibold text-sm">Performance Testing</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="85" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">JMeter</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="85" style="height:6px;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
-                    <h3 class="text-xl font-bold text-primary mb-6">Automated Testing</h3>
+                <!-- Manual Testing -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md fade-in-element">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            style="width:38px;height:38px;border-radius:10px;background:rgba(6,182,212,0.15);display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-clipboard-list" style="color:#06b6d4;font-size:1.1rem;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Manual Testing</h3>
+                    </div>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Selenium</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
+                                <span class="font-semibold text-sm">Create Test Plan</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Webdriver.io</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="95" style="height:6px;"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Postman</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
+                                <span class="font-semibold text-sm">Create Test & Scenarios</span>
+                                <span class="text-gray-600 text-xs font-medium">Expert</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="100" style="height:6px;"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Appium</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
+                                <span class="font-semibold text-sm">Verification & Validation</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="95" style="height:6px;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
-                    <h3 class="text-xl font-bold text-primary mb-6">Project Management</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Jira</span>
-                                <span class="text-gray-600 font-medium">Expert</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
-                            </div>
+
+                <!-- Automated Testing -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md fade-in-element">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            style="width:38px;height:38px;border-radius:10px;background:rgba(34,197,94,0.15);display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-robot" style="color:#22c55e;font-size:1.1rem;"></i>
                         </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Kanban & Trello</span>
-                                <span class="text-gray-600 font-medium">Expert</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Github</span>
-                                <span class="text-gray-600 font-medium">Expert</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
-                            </div>
-                        </div>
-                        <!-- <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">AS400</span>
-                                <span class="text-gray-600 font-medium">Expert</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="95"></div>
-                            </div>
-                        </div> -->
+                        <h3 class="text-xl font-bold">Automated Testing</h3>
                     </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md fade-in-element">
-                    <h3 class="text-xl font-bold text-primary mb-6">Programming Languages</h3>
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">JavaScript</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
+                                <span class="font-semibold text-sm">Selenium</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Python</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="90"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold">SQL</span>
-                                <span class="text-gray-600 font-medium">Advanced</span>
+                                <span class="font-semibold text-sm">WebdriverIO</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-primary h-2 rounded-full" data-width="85"></div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">Postman</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">Appium</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project Management -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md fade-in-element">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            style="width:38px;height:38px;border-radius:10px;background:rgba(234,179,8,0.15);display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-tasks" style="color:#eab308;font-size:1.1rem;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Project Management</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">Jira</span>
+                                <span class="text-gray-600 text-xs font-medium">Expert</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="95" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">Kanban & Trello</span>
+                                <span class="text-gray-600 text-xs font-medium">Expert</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="95" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">GitHub</span>
+                                <span class="text-gray-600 text-xs font-medium">Expert</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="95" style="height:6px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md fade-in-element">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            style="width:38px;height:38px;border-radius:10px;background:rgba(236,72,153,0.15);display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-code" style="color:#ec4899;font-size:1.1rem;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Programming</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">JavaScript</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">Python</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="90" style="height:6px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-sm">SQL</span>
+                                <span class="text-gray-600 text-xs font-medium">Advanced</span>
+                            </div>
+                            <div class="w-full skill-bar-track rounded-full" style="height:6px;">
+                                <div class="skill-bar rounded-full" data-width="85" style="height:6px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-16 bg-white">
+    <!-- ═══════════════════════════════════════════
+         EXPERIENCE SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="experience" class="py-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Experience</h2>
-            
+            <h2 class="section-title">Experience</h2>
+
             <div class="space-y-8">
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary fade-in-element">
-                    <h3 class="text-2xl font-bold text-primary mb-2">QA Engineer</h3>
-                    <div class="font-semibold text-gray-800 mb-2">Bank Rakyat Indonesia</div>
-                    <div class="text-gray-600 text-sm mb-4">August 2025 - Present</div>
-                    
-                    <div class="mb-4">
-                        <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify">
-                            <li>Engineered and maintained robust automation test frameworks using Selenium with Python, successfully reducing regression testing cycles by 50% and accelerating production deployment.</li>
-                            <li>Spearheaded comprehensive API and backend testing using Postman and Kibana/Elastic Stack, ensuring 100% data integrity, system stability, and identifying critical performance bottlenecks.</li>
-                        </ul>
-                        
-                        <div class="mt-4">
-                            <h4 class="font-bold text-gray-800 mb-2">Project: New Qlola Component 2026</h4>
-                            <ul class="list-disc text-gray-600 space-y-2 ml-8 list-outside text-justify">
-                                <li>Optimized application reliability for the platform by rigorously validating UI/UX design, customer data security protocols, core payment processing, transaction limits, and high-risk operations.</li>
-                                <li>Led the quality gate for the UI/UX Migration project, meticulously verifying complete website redesigns from Figma specifications to ensure flawless functional integrity and user experience.</li>
-                                <li>Proactively identified, documented, and tracked over 100 high-priority defects via Jira, collaborating closely within cross-functional Agile/Scrum teams to drive rapid issue resolution.</li>
-                            </ul>
+
+                <!-- BRI -->
+                <div class="exp-card bg-white p-7 rounded-lg shadow-md fade-in-element">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold">QA Engineer</h3>
+                            <div class="company mt-1">Bank Rakyat Indonesia (BRI)</div>
                         </div>
+                        <div class="period flex items-center gap-2 shrink-0">
+                            <i class="fas fa-calendar-alt"></i>
+                            August 2025 – Present
+                        </div>
+                    </div>
+                    <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify mb-4">
+                        <li>Engineered and maintained robust automation test frameworks using <strong
+                                style="color:#f1f5f9;">Selenium with Python</strong>, successfully reducing regression
+                            testing cycles by 50% and accelerating production deployment.</li>
+                        <li>Spearheaded comprehensive API and backend testing using <strong
+                                style="color:#f1f5f9;">Postman and Kibana/Elastic Stack</strong>, ensuring 100% data
+                            integrity and identifying critical performance bottlenecks.</li>
+                    </ul>
+                    <div class="mt-4 pl-4 border-l-2" style="border-color: rgba(139,92,246,0.3);">
+                        <h4 class="font-bold mb-2 text-sm uppercase tracking-wider" style="color: #8b5cf6;">
+                            <i class="fas fa-project-diagram mr-2"></i>Project: New Qlola Component 2026
+                        </h4>
+                        <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify text-sm">
+                            <li>Optimized application reliability by rigorously validating UI/UX design, customer data
+                                security, core payment processing, transaction limits, and batch processing scenarios.
+                            </li>
+                            <li>Led the quality gate for the <strong style="color:#f1f5f9;">UI/UX Migration</strong>
+                                project, verifying complete website redesigns from Figma specifications.</li>
+                            <li>Proactively identified and tracked over <strong style="color:#f1f5f9;">100 high-priority
+                                    defects</strong> via Jira in cross-functional Agile/Scrum teams.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary fade-in-element">
-                    <h3 class="text-2xl font-bold text-primary mb-2">QA Engineer</h3>
-                    <div class="font-semibold text-gray-800 mb-2">Bank UOB Indonesia</div>
-                    <div class="text-gray-600 text-sm mb-4">August 2023 - May 2025</div>
-                    
-                    <div class="mb-4">
-                        <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify">
-                            <li>Executed end-to-end manual and functional testing across high-traffic web and mobile banking applications, discovering 100+ critical bugs and improving overall release efficiency by 40%.</li>
-                            <li>Guaranteed backend stability and real-time history processing by conducting rigorous API validation with Postman, preventing potential transaction failures in live environments.</li>
-                            <li>Successfully delivered the U-Infinity Web project by validating high-value features, including tax payments and BI-FAST integrations via NIK/NPWP, securing secure and reliable real-time transactions.</li>
-                            <li>Maximized test coverage and payment gateway reliability for the U-4Trade Web and U-4Trade + WinSCP/AS400 platforms, analyzing system processing capacity and managing secure file transfers via FTP/FTPS.</li>
-                            <li>Collaborated dynamically within hybrid Waterfall and Agile/Scrum frameworks, serving as a key bridge to streamline communication and accelerate software delivery lifecycles.</li> 
-                        </ul>
+                <!-- UOB -->
+                <div class="exp-card bg-white p-7 rounded-lg shadow-md fade-in-element">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold">QA Engineer</h3>
+                            <div class="company mt-1">Bank UOB Indonesia</div>
+                        </div>
+                        <div class="period flex items-center gap-2 shrink-0">
+                            <i class="fas fa-calendar-alt"></i>
+                            August 2023 – May 2025
+                        </div>
                     </div>
+                    <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify">
+                        <li>Executed end-to-end manual and functional testing across high-traffic web and mobile banking
+                            applications, discovering <strong style="color:#f1f5f9;">100+ critical bugs</strong> and
+                            improving release efficiency by 40%.</li>
+                        <li>Guaranteed backend stability by conducting rigorous <strong style="color:#f1f5f9;">API
+                                validation with Postman</strong>, preventing potential transaction failures in live
+                            environments.</li>
+                        <li>Successfully delivered the <strong style="color:#f1f5f9;">U-Infinity Web</strong> project by
+                            validating tax payments and BI-FAST integrations via NIK/NPWP.</li>
+                        <li>Maximized test coverage for the <strong style="color:#f1f5f9;">U-4Trade Web</strong> and
+                            U-4Trade + WinSCP/AS400 platforms, managing secure file transfers via FTP/FTPS.</li>
+                        <li>Collaborated dynamically within hybrid Waterfall and Agile/Scrum frameworks as a key bridge
+                            between QA and development teams.</li>
+                    </ul>
                 </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary fade-in-element">
-                    <h3 class="text-2xl font-bold text-primary mb-2">QA Engineer</h3>
-                    <div class="font-semibold text-gray-800 mb-2">Bank Negara Indonesia</div>
-                    <div class="text-gray-600 text-sm mb-4">January 2022 - July 2023</div>
-                    
-                    <div>
-                        <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify">
-                            <li>Designed and implemented standardized regression and functional testing strategies, which successfully boosted QA process efficiency by 50%.</li>
-                            <li>Managed System Integration Testing (SIT) and facilitated live User Acceptance Testing (UAT) sessions, effectively aligning technical deliverables with business requirements alongside key stakeholders.</li>
-                            <li>Secured the launch of core digital payment features, including the Tapcash/E-Toll ecosystem (validating NFC e-money chips and Tapcash GO integrations) and ensuring seamless real-time synchronization for Mbanking BNI.</li>
-                            <li>Constructed comprehensive test scenarios for the Credit Card/ATM Simulator, validating end-to-end ATM hardware and software integrations to minimize transactional errors.</li>
-                            <li>Leveraged JIRA for advanced bug tracking and established clear communication protocols between QA and development teams, reducing friction and minimizing time-to-resolution.</li> 
-                        </ul>
+
+                <!-- BNI -->
+                <div class="exp-card bg-white p-7 rounded-lg shadow-md fade-in-element">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold">QA Engineer</h3>
+                            <div class="company mt-1">Bank Negara Indonesia (BNI)</div>
+                        </div>
+                        <div class="period flex items-center gap-2 shrink-0">
+                            <i class="fas fa-calendar-alt"></i>
+                            January 2022 – July 2023
+                        </div>
                     </div>
+                    <ul class="list-disc text-gray-600 space-y-2 ml-4 list-outside text-justify">
+                        <li>Designed and implemented standardized regression and functional testing strategies, boosting
+                            QA process efficiency by <strong style="color:#f1f5f9;">50%</strong>.</li>
+                        <li>Managed <strong style="color:#f1f5f9;">SIT and UAT</strong> sessions, aligning technical
+                            deliverables with business requirements alongside key stakeholders.</li>
+                        <li>Secured the launch of core digital payment features including the <strong
+                                style="color:#f1f5f9;">Tapcash/E-Toll ecosystem</strong> and real-time synchronization
+                            for Mbanking BNI.</li>
+                        <li>Constructed comprehensive test scenarios for the <strong style="color:#f1f5f9;">Credit
+                                Card/ATM Simulator</strong>, validating end-to-end hardware and software integrations.
+                        </li>
+                        <li>Leveraged JIRA for advanced bug tracking and established clear communication protocols,
+                            reducing time-to-resolution.</li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-16 bg-gray-50">
+    <!-- ═══════════════════════════════════════════
+         PROJECTS SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="projects" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6 flex flex-col h-full"> 
-                        <h3 class="text-xl font-bold text-primary mb-3">Qlola Platform</h3>
-                        <p class="text-gray-600 mb-4 text-justify flex-grow">
-                            Validated UI/UX, Customer Data Security, Payment Processing, Transaction Limits, Midnight Batch Processing, and Negative Scenarios. Verified complete website redesign from Figma specifications ensuring functional integrity.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Jira</span>
-                        </div>
-                        <button data-project-id="project1" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center project-open-btn">
-                            View Project
-                        </button>
+            <h2 class="section-title">Projects</h2>
+            <p class="text-center mb-12"
+                style="color: var(--text-secondary); max-width: 560px; margin: -1.5rem auto 3rem; font-size: 0.95rem;">
+                Real QA work delivered in banking and financial applications — click any project to view evidence
+                screenshots.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+                <!-- Project 1: Qlola -->
+                <div class="project-card rounded-lg fade-in-element">
+                    <div class="project-thumb-wrap">
+                        <img src="images/BRI/Dashboard-Qlola-1.jpeg" alt="Qlola Platform" class="project-thumb"
+                            loading="lazy">
                     </div>
-                </div> 
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6 flex flex-col h-full">
-                        <h3 class="text-xl font-bold text-primary mb-3">U-Infinity Web</h3>
-                        <p class="text-gray-600 mb-4 text-justify flex-grow">
-                            Validated tax payment and BIFAST features using NIK/NPWP with real-time transaction history. Modern E2E testing framework for web applications with comprehensive test coverage.
+                    <div class="p-6 flex flex-col h-full" style="flex:1;">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                style="font-size:0.7rem; font-weight:600; letter-spacing:0.8px; text-transform:uppercase; color:#22c55e; background:rgba(34,197,94,0.1); padding:2px 10px; border-radius:99px; border:1px solid rgba(34,197,94,0.25);">BRI
+                                · 2025–Present</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Qlola Platform</h3>
+                        <p class="mb-4 text-justify flex-grow" style="font-size:0.88rem;">
+                            Validated UI/UX, Customer Data Security, Payment Processing, Transaction Limits, Midnight
+                            Batch Processing, and Negative Scenarios. Verified complete website redesign from Figma
+                            specifications.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">SQL</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">AS400</span>
+                            <span class="project-tag">Manual Testing</span>
+                            <span class="project-tag">Figma</span>
+                            <span class="project-tag">Jira</span>
                         </div>
-                        <button data-project-id="project2" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center project-open-btn">
-                            View Project
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                     <div class="p-6 flex flex-col h-full">
-                        <h3 class="text-xl font-bold text-primary mb-3">U-4Trade Core Banking</h3>
-                        <p class="text-gray-600 mb-4 text-justify flex-grow">
-                            Developed test scenarios for payment gateway and enhanced test coverage. Tested payment transactions via FTP/FTPS, analyzing processing capacity and performance.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">SQL</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">AS400</span>
-                        </div>
-                        <button data-project-id="project3" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center project-open-btn">
-                            View Project
+                        <button data-project-id="project1" class="btn-view-project project-open-btn">
+                            <i class="fas fa-images mr-2"></i> View Evidence
                         </button>
                     </div>
                 </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6 flex flex-col h-full">
-                        <h3 class="text-xl font-bold text-primary mb-3">Credit Card/ATM Simulator</h3>
-                        <p class="text-gray-600 mb-4 text-justify flex-grow">
-                            Executed comprehensive test cases for electronic money systems, including reader validation, transaction flow testing, and error scenario handling.
+
+                <!-- Project 2: U-Infinity -->
+                <div class="project-card rounded-lg fade-in-element">
+                    <div class="project-thumb-wrap">
+                        <img src="images/UOB/Dashboard-1.png" alt="U-Infinity Web" class="project-thumb" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full" style="flex:1;">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                style="font-size:0.7rem; font-weight:600; letter-spacing:0.8px; text-transform:uppercase; color:#3b82f6; background:rgba(59,130,246,0.1); padding:2px 10px; border-radius:99px; border:1px solid rgba(59,130,246,0.25);">UOB
+                                · 2023–2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">U-Infinity Web</h3>
+                        <p class="mb-4 text-justify flex-grow" style="font-size:0.88rem;">
+                            Validated tax payment and BI-FAST features using NIK/NPWP with real-time transaction
+                            history. Comprehensive E2E testing framework for web applications.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">ATM Simulator</span>
+                            <span class="project-tag">Manual Testing</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">AS400</span>
                         </div>
-                        <button data-project-id="project4" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center project-open-btn">
-                            View Project
+                        <button data-project-id="project2" class="btn-view-project project-open-btn">
+                            <i class="fas fa-images mr-2"></i> View Evidence
                         </button>
                     </div>
                 </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6 flex flex-col h-full">
-                        <h3 class="text-xl font-bold text-primary mb-3">Tapcash/E-Money</h3>
-                        <p class="text-gray-600 mb-4 text-justify flex-grow">
-                            Validated NFC e-money chip payment capabilities and complete end-to-end integration mapping for the Tapcash GO ecosystem.
+
+                <!-- Project 3: U-4Trade -->
+                <div class="project-card rounded-lg fade-in-element">
+                    <div class="project-thumb-wrap">
+                        <img src="images/UOB/Dashboard-2.png" alt="U-4Trade Core Banking" class="project-thumb"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full" style="flex:1;">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                style="font-size:0.7rem; font-weight:600; letter-spacing:0.8px; text-transform:uppercase; color:#3b82f6; background:rgba(59,130,246,0.1); padding:2px 10px; border-radius:99px; border:1px solid rgba(59,130,246,0.25);">UOB
+                                · 2023–2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">U-4Trade Core Banking</h3>
+                        <p class="mb-4 text-justify flex-grow" style="font-size:0.88rem;">
+                            Developed test scenarios for payment gateway and enhanced test coverage. Tested payment
+                            transactions via FTP/FTPS, analyzing processing capacity and performance.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Manual Testing</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">E-Money</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">EDC</span>
+                            <span class="project-tag">Manual Testing</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">AS400</span>
                         </div>
-                        <button data-project-id="project5" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center project-open-btn">
-                            View Project
+                        <button data-project-id="project3" class="btn-view-project project-open-btn">
+                            <i class="fas fa-images mr-2"></i> View Evidence
                         </button>
                     </div>
                 </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6 flex flex-col h-full">
-                        <h3 class="text-xl font-bold text-primary mb-3">Mobile Banking BNI</h3>
-                        <p class="text-gray-600 mb-4 text-justify flex-grow">
-                            Ensured real-time feature updates and data synchronization for cross-platform functionality testing across Android, iOS, and Huawei devices.
+
+                <!-- Project 4: ATM Simulator -->
+                <div class="project-card rounded-lg fade-in-element">
+                    <div class="project-thumb-wrap">
+                        <img src="images/BNI/ATM-1.jpg" alt="Credit Card / ATM Simulator" class="project-thumb"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full" style="flex:1;">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                style="font-size:0.7rem; font-weight:600; letter-spacing:0.8px; text-transform:uppercase; color:#8b5cf6; background:rgba(139,92,246,0.1); padding:2px 10px; border-radius:99px; border:1px solid rgba(139,92,246,0.25);">BNI
+                                · 2022–2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Credit Card / ATM Simulator</h3>
+                        <p class="mb-4 text-justify flex-grow" style="font-size:0.88rem;">
+                            Executed comprehensive test cases for electronic money systems, including reader validation,
+                            transaction flow testing, and error scenario handling for ATM hardware.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Cross-Platform Testing</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Mobile App</span>
+                            <span class="project-tag">Manual Testing</span>
+                            <span class="project-tag">ATM Simulator</span>
                         </div>
-                        <button data-project-id="project6" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center project-open-btn">
-                            View Project
+                        <button data-project-id="project4" class="btn-view-project project-open-btn">
+                            <i class="fas fa-images mr-2"></i> View Evidence
                         </button>
                     </div>
                 </div>
+
+                <!-- Project 5: Tapcash -->
+                <div class="project-card rounded-lg fade-in-element">
+                    <div class="project-thumb-wrap">
+                        <img src="images/BNI/EDC-2.jpg" alt="Tapcash / E-Money" class="project-thumb" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full" style="flex:1;">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                style="font-size:0.7rem; font-weight:600; letter-spacing:0.8px; text-transform:uppercase; color:#8b5cf6; background:rgba(139,92,246,0.1); padding:2px 10px; border-radius:99px; border:1px solid rgba(139,92,246,0.25);">BNI
+                                · 2022–2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Tapcash / E-Money</h3>
+                        <p class="mb-4 text-justify flex-grow" style="font-size:0.88rem;">
+                            Validated NFC e-money chip payment capabilities and complete end-to-end integration mapping
+                            for the Tapcash GO ecosystem using EDC devices.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="project-tag">Manual Testing</span>
+                            <span class="project-tag">E-Money</span>
+                            <span class="project-tag">EDC</span>
+                        </div>
+                        <button data-project-id="project5" class="btn-view-project project-open-btn">
+                            <i class="fas fa-images mr-2"></i> View Evidence
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 6: Mobile Banking BNI -->
+                <div class="project-card rounded-lg fade-in-element">
+                    <div class="project-thumb-wrap">
+                        <img src="images/BNI/Mbanking-2.jpg" alt="Mobile Banking BNI" class="project-thumb"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full" style="flex:1;">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                style="font-size:0.7rem; font-weight:600; letter-spacing:0.8px; text-transform:uppercase; color:#8b5cf6; background:rgba(139,92,246,0.1); padding:2px 10px; border-radius:99px; border:1px solid rgba(139,92,246,0.25);">BNI
+                                · 2022–2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mobile Banking BNI</h3>
+                        <p class="mb-4 text-justify flex-grow" style="font-size:0.88rem;">
+                            Ensured real-time feature updates and data synchronization for cross-platform functionality
+                            testing across Android, iOS, and Huawei devices.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="project-tag">Cross-Platform</span>
+                            <span class="project-tag">Mobile App</span>
+                        </div>
+                        <button data-project-id="project6" class="btn-view-project project-open-btn">
+                            <i class="fas fa-images mr-2"></i> View Evidence
+                        </button>
+                    </div>
+                </div>
+
             </div>
 
-            <div id="universalProjectModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
-                <div class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                    <button data-close-modal class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
+            <!-- ── UNIVERSAL PROJECT MODAL ── -->
+            <div id="universalProjectModal"
+                class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4 backdrop-blur-sm">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
+                    <button data-close-modal
+                        class="close-btn absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold z-10 bg-white dark:bg-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl hover:rotate-90 transition-all duration-300">
                         &times;
                     </button>
                     <div id="universalModalContent" class="p-6 sm:p-8"></div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- <section id="personal-projects" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Personal Projects</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition fade-in-element">
-                    <div class="p-6 flex flex-col h-full"> 
-                        <h3 class="text-xl font-bold text-primary mb-3">Web Automation</h3>
-                        <p class="text-gray-600 mb-4 text-justify flex-grow">
-                            Selenium Webdriver testing using Mocha with Mochawesome reports. Login, Sort Items, Used Hooks, Cross Browser, Generate Reports (.html), Configurate Credential (.env)
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Selenium</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Mocha</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Javascript</span>
-                        </div>
-                        <button data-project-id="project7" class="mt-auto w-full inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-lg transition text-center project-open-btn">
-                            View Project
-                        </button>
-                    </div>
-                </div>
-            </div> 
-        </div>
-    </section> --> 
-    <!-- #ini akan digunakan ketika sudah membuat evidence -->
-
-    <section id="certifications" class="py-16 bg-white">
+    <!-- ═══════════════════════════════════════════
+         CERTIFICATIONS SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="certifications" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Certifications & Training</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
-                    <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Certified Tester Foundation Level (CTFL)</h4>
-                    <p class="text-gray-600">ISTQB® (On Going Learning) - 2026</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
-                    <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Assistant Web Developer</h4>
-                    <p class="text-gray-600">KOMDIGI - Digital Talent Indonesia - 2026</p>
+            <h2 class="section-title">Certifications & Training</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-award"></i></span>
+                    <h4>Certified Tester Foundation Level (CTFL)</h4>
+                    <p>ISTQB® (On Going Learning) · 2026</p>
                 </div>
 
-                
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element flex flex-col items-center justify-between">
-                    <div>
-                        <div class="text-primary text-4xl mb-3">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h4 class="font-bold text-lg mb-2">API Testing</h4>
-                        <p class="text-gray-600 mb-4">Postman - 2025</p>
-                    </div>
-                    <!-- <a href="https://github.com/JuanDanielFP/API-Testing" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-4 py-2 text-sm rounded-full shadow-md hover:bg-blue-800 transition">
-                        <i class="fab fa-github"></i> View Source Code
-                    </a> -->
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-laptop-code"></i></span>
+                    <h4>Assistant Web Developer</h4>
+                    <p>KOMDIG · Digital Talent Indonesia · 2026</p>
                 </div>
 
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
-                    <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Technical Support Fundamental (Google)</h4>
-                    <p class="text-gray-600">Coursera and Google - 2024</p>
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-network-wired"></i></span>
+                    <h4>API Testing</h4>
+                    <p>Postman · 2025</p>
                 </div>
 
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
-                    <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-check-double"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Quality Assurance</h4>
-                    <p class="text-gray-600">Sanber Code - 2024</p>
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-tools"></i></span>
+                    <h4>Technical Support Fundamental</h4>
+                    <p>Coursera & Google · 2024</p>
                 </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
-                    <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">UOB Risk Culture</h4>
-                    <p class="text-gray-600">Bank UOB Indonesia - 2024</p>
+
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-check-double"></i></span>
+                    <h4>Quality Assurance</h4>
+                    <p>Sanber Code · 2024</p>
                 </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
-                    <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Data Engineer Challenge with SQL</h4>
-                    <p class="text-gray-600">DQLAB - 2024</p>
+
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-shield-alt"></i></span>
+                    <h4>UOB Risk Culture</h4>
+                    <p>Bank UOB Indonesia · 2024</p>
                 </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
-                    <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-file-excel"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">Basic Excel Training</h4>
-                    <p class="text-gray-600">Seratus Ilmu - 2023</p>
+
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-database"></i></span>
+                    <h4>Data Engineer Challenge with SQL</h4>
+                    <p>DQLAB · 2024</p>
                 </div>
-                
-                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition fade-in-element">
-                    <div class="text-primary text-4xl mb-3">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2">TOEFL</h4>
-                    <p class="text-gray-600">Score: 500 - 2023</p>
+
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-file-excel"></i></span>
+                    <h4>Basic Excel Training</h4>
+                    <p>Seratus Ilmu · 2023</p>
+                </div>
+
+                <div class="cert-card bg-gray-50 p-6 rounded-lg fade-in-element">
+                    <span class="cert-icon"><i class="fas fa-language"></i></span>
+                    <h4>TOEFL — Score 500</h4>
+                    <p>English Proficiency · 2023</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-12 sm:py-16 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6">Get In Touch</h2>
-            <p class="text-center text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg px-4">
-                I'm always open to discussing quality assurance opportunities, testing strategies, or collaboration ideas.
+    <!-- ═══════════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════════ -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="section-title">Get In Touch</h2>
+
+            <p class="mb-12 mx-auto"
+                style="color: var(--text-secondary); max-width: 520px; font-size: 1rem; line-height: 1.75;">
+                I'm always open to discussing quality assurance opportunities, testing strategies, or collaboration
+                ideas.
+                Let's connect!
             </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-6 sm:mt-8 px-4">
-                <a href="https://wa.me/6282134618257" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-green-600 transition w-full sm:w-auto min-w-[160px]">
+
+            <!-- Contact card -->
+            <div class="mx-auto max-w-xl p-8 rounded-2xl mb-10 fade-in-element"
+                style="background: var(--bg-card); border: 1px solid var(--border);">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4 p-4 rounded-xl" style="background: rgba(255,255,255,0.03);">
+                        <div
+                            style="width:40px;height:40px;border-radius:10px;background:rgba(59,130,246,0.15);display:flex;align-items:center;justify-content:center;shrink:0;">
+                            <i class="fas fa-envelope" style="color:#3b82f6;"></i>
+                        </div>
+                        <div class="text-left">
+                            <div
+                                style="color:var(--text-muted);font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:2px;">
+                                Email</div>
+                            <a href="mailto:juand21695@gmail.com"
+                                style="color:var(--text-primary);font-weight:500;font-size:0.95rem;">juand21695@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-xl" style="background: rgba(255,255,255,0.03);">
+                        <div
+                            style="width:40px;height:40px;border-radius:10px;background:rgba(37,211,102,0.15);display:flex;align-items:center;justify-content:center;shrink:0;">
+                            <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+                        </div>
+                        <div class="text-left">
+                            <div
+                                style="color:var(--text-muted);font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:2px;">
+                                WhatsApp</div>
+                            <a href="https://wa.me/6282134618257" target="_blank" rel="noopener noreferrer"
+                                style="color:var(--text-primary);font-weight:500;font-size:0.95rem;">+62
+                                821-3461-8257</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-xl" style="background: rgba(255,255,255,0.03);">
+                        <div
+                            style="width:40px;height:40px;border-radius:10px;background:rgba(0,119,181,0.15);display:flex;align-items:center;justify-content:center;shrink:0;">
+                            <i class="fab fa-linkedin-in" style="color:#0077B5;"></i>
+                        </div>
+                        <div class="text-left">
+                            <div
+                                style="color:var(--text-muted);font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:2px;">
+                                LinkedIn</div>
+                            <a href="https://www.linkedin.com/in/juandaniel99/" target="_blank"
+                                rel="noopener noreferrer"
+                                style="color:var(--text-primary);font-weight:500;font-size:0.95rem;">linkedin.com/in/juandaniel99</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 flex-wrap">
+                <a href="https://wa.me/6282134618257" target="_blank" rel="noopener noreferrer"
+                    class="contact-btn contact-btn-whatsapp">
                     <i class="fab fa-whatsapp text-xl"></i>
-                    <span class="font-medium">WhatsApp</span>
+                    <span>WhatsApp</span>
                 </a>
-                <a href="mailto:juand21695@gmail.com" class="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition w-full sm:w-auto min-w-[160px]">
+                <a href="mailto:juand21695@gmail.com" class="contact-btn contact-btn-email">
                     <i class="fas fa-envelope text-xl"></i>
-                    <span class="font-medium">Email</span>
+                    <span>Email Me</span>
                 </a>
-                <a href="https://www.linkedin.com/in/juandaniel99/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition w-full sm:w-auto min-w-[160px]">
+                <a href="https://www.linkedin.com/in/juandaniel99/" target="_blank" rel="noopener noreferrer"
+                    class="contact-btn contact-btn-linkedin">
                     <i class="fab fa-linkedin-in text-xl"></i>
-                    <span class="font-medium">LinkedIn</span>
+                    <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/JuanDanielFP" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition w-full sm:w-auto min-w-[160px]">
-                    <i class="fab fa-github text-xl"></i> GitHub
+                <a href="https://github.com/JuanDanielFP" target="_blank" rel="noopener noreferrer"
+                    class="contact-btn contact-btn-github">
+                    <i class="fab fa-github text-xl"></i>
+                    <span>GitHub</span>
                 </a>
             </div>
+
+            <!-- Footer note -->
+            <p class="mt-12 text-sm" style="color: var(--text-muted);">
+                &copy; 2026 Juan Daniel Febrison Pattirane. Built with ❤️ &amp; precision.
+            </p>
         </div>
     </section>
 
     <script src="js/script.js" defer></script>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-﻿const initMobileMenu = () => {
+const initMobileMenu = () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
@@ -93,7 +93,7 @@ const initScrollAnimations = () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.bg-white.p-6.rounded-lg.shadow-md').forEach(element => {
+    document.querySelectorAll('.skill-card, .bg-white.p-6.rounded-lg.shadow-md').forEach(element => {
         if (element.querySelector('.skill-bar')) {
             skillObserver.observe(element);
         }
@@ -102,8 +102,9 @@ const initScrollAnimations = () => {
 
 const initScrollTopButton = () => {
     const button = document.createElement('button');
+    button.id = 'scroll-top-btn';
     button.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    button.className = 'fixed bottom-8 right-8 bg-primary hover:bg-secondary text-white w-12 h-12 rounded-full shadow-lg hidden items-center justify-center transition transform hover:scale-110 z-50';
+    button.style.cssText = 'position:fixed;bottom:2rem;right:2rem;width:3rem;height:3rem;border-radius:50%;color:#fff;display:none;align-items:center;justify-content:center;z-index:50;border:none;cursor:pointer;font-size:1rem;';
     document.body.appendChild(button);
 
     button.addEventListener('click', () => {
@@ -112,11 +113,9 @@ const initScrollTopButton = () => {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
-            button.classList.remove('hidden');
-            button.classList.add('flex');
+            button.style.display = 'flex';
         } else {
-            button.classList.add('hidden');
-            button.classList.remove('flex');
+            button.style.display = 'none';
         }
     });
 };
@@ -325,25 +324,25 @@ const openProjectModal = (projectId) => {
 
     const imagesHTML = project.images.map((image) => `
         <div class="mb-6 modal-fade-in">
-            <img src="${image.src}" alt="${image.caption}" class="project-image w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-all duration-300" data-src="${image.src}">
-            <p class="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">${image.caption}</p>
+            <img src="${image.src}" alt="${image.caption}" class="project-image w-full rounded-lg cursor-pointer transition-all duration-300" style="border:1px solid rgba(139,92,246,0.18);box-shadow:0 4px 20px rgba(0,0,0,0.4);" data-src="${image.src}" onmouseover="this.style.opacity='0.88';this.style.transform='scale(1.01)'" onmouseout="this.style.opacity='1';this.style.transform='scale(1)'">
+            <p style="text-align:center;color:#64748b;font-size:0.82rem;margin-top:8px;">${image.caption}</p>
         </div>
     `).join('');
 
     const technologiesHTML = project.technologies.map((tech) => `
-        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 inline-block modal-fade-in">${tech}</span>
+        <span style="background:rgba(59,130,246,0.14);color:#3b82f6;border:1px solid rgba(59,130,246,0.3);border-radius:99px;padding:4px 14px;font-size:0.78rem;font-weight:600;margin-right:8px;margin-bottom:8px;display:inline-block;" class="modal-fade-in">${tech}</span>
     `).join('');
 
     modalContent.innerHTML = `
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 modal-fade-in">${project.title}</h2>
-        <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify modal-fade-in">${project.details}</p>
-        <div class="mb-6 modal-fade-in">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Technologies Used</h3>
-            <div class="flex flex-wrap">${technologiesHTML}</div>
+        <h2 style="font-size:1.8rem;font-weight:800;font-family:'Space Grotesk',sans-serif;background:linear-gradient(135deg,#3b82f6,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;" class="modal-fade-in">${project.title}</h2>
+        <p style="color:#94a3b8;line-height:1.8;text-align:justify;margin-bottom:24px;" class="modal-fade-in">${project.details}</p>
+        <div style="margin-bottom:24px;" class="modal-fade-in">
+            <h3 style="color:#f1f5f9;font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;opacity:0.7;">Technologies Used</h3>
+            <div style="display:flex;flex-wrap:wrap;gap:4px;">${technologiesHTML}</div>
         </div>
-        <div class="mb-4 modal-fade-in">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Project Screenshots</h3>
-            <div class="space-y-6">${imagesHTML}</div>
+        <div class="modal-fade-in">
+            <h3 style="color:#f1f5f9;font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:16px;opacity:0.7;">Project Evidence</h3>
+            <div>${imagesHTML}</div>
         </div>
     `;
 
@@ -421,6 +420,26 @@ const initPortfolio = () => {
     setSkillBars();
     debugLog();
     initProjectModal();
+
+    // Typing effect in hero
+    const typedEl = document.getElementById('typed-role');
+    if (typedEl) {
+        typingEffect(typedEl, [
+            'QA Engineer',
+            'Manual Tester',
+            'Automation Specialist',
+            'API Testing Expert',
+            'Banking QA Expert'
+        ], 80);
+    }
+
+    // Hide loading overlay
+    const overlay = document.getElementById('loading-overlay');
+    if (overlay) {
+        overlay.style.opacity = '0';
+        overlay.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => overlay.remove(), 500);
+    }
 };
 
 document.addEventListener('DOMContentLoaded', initPortfolio);
