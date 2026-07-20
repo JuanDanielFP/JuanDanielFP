@@ -96,12 +96,16 @@ My expertise spans comprehensive manual testing, API validation, and building ro
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=JuanDanielFP&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="49%" />
-  <img src="https://github-readme-stats.vercel.app/api?username=JuanDanielFP&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" width="49%" />
+  <img src="https://streak-stats.demolab.com/?user=JuanDanielFP&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" width="49%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=JuanDanielFP&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github" alt="GitHub Stats" width="49%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JuanDanielFP&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="40%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JuanDanielFP&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Top Languages" width="40%" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=JuanDanielFP&theme=tokyonight&no-frame=true&row=1&column=6" alt="GitHub Trophies" />
 </p>
 
 ---
